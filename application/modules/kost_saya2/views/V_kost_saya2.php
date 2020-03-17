@@ -211,7 +211,8 @@
                                                         <button class="bg-gray hover-bg-primary hover-text-white text-ordinary py-3 px-4 mb-1 w-100 text-left rounded position-relative collapsed position-relative" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> Lantai 3 </button>
                                                         <div id="collapseThree" class="collapse p-4" aria-labelledby="headingThree" data-parent="#accordionExample">
                                                             <div class="row">
-                                                                <div class="col-md-12">
+                                                              <div class="col-md-4"></div>
+                                                                <div class="col-md-4">
                                                                 <div class="browse-submit">
                                                                   <input type="file" class="dropify" id="images" name="denah_3" onchange="preview_images();" multiple/>
                                                                     <div class="row" id="image_preview"></div>
@@ -222,9 +223,10 @@
                                                         <button class="bg-gray hover-bg-primary hover-text-white text-ordinary py-3 px-4 mb-1 w-100 text-left rounded position-relative collapsed position-relative" type="button" data-toggle="collapse" data-target="#collapsefour" aria-expanded="false" aria-controls="collapseThree"> Lantai 4 </button>
                                                         <div id="collapsefour" class="collapse p-4" aria-labelledby="headingThree" data-parent="#accordionExample">
                                                             <div class="row">
-                                                                <div class="col-md-12">
+                                                              <div class="col-md-4"></div>
+                                                                <div class="col-md-4">
                                                                 <div class="browse-submit">
-                                                                  <input type="file" class="form-control" id="images" name="denah_4" onchange="preview_images();" multiple/>
+                                                                  <input type="file" class="dropify" id="images" name="denah_4" onchange="preview_images();" multiple/>
                                                                   <div class="row" id="image_preview"></div>
                                                                 </div>
                                                             </div>
@@ -238,10 +240,14 @@
                                         <div class="upload-media mt-5">
                                             <hr>
                                             <div class="row">
-                                                <div class="col-md-12">
-                                                <input type="file" class="form-control" id="images" name="foto_kost" onchange="preview();" multiple/>
-                                                <br>
-                                                <div class="row" id="image"></div>
+                                                <div class="col-md-4">
+                                               <input type="file" class="dropify" id="images" name="foto_kost"  multiple/>
+                                                </div>
+                                                <div class="col-md-4">
+                                               <input type="file" class="dropify" id="images" name="foto_kost2"  multiple/>
+                                                </div>
+                                                <div class="col-md-4">
+                                               <input type="file" class="dropify" id="images" name="foto_kost3"  multiple/>
                                                 </div>
                                             </div>
                                         </div>
@@ -251,13 +257,13 @@
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <ul class="nav nav-pills mb-3 bg-gray" id="pills-tab" role="tablist">
-                                                        <li class="nav-item"> <a class="nav-link py-3 active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Rumah Sakit</a> </li>
+                                                        <li class="nav-item"> <a class="nav-link py-3 active" id="pills-home-tab" data-toggle="pill" href="#rumah_sakit" role="tab" aria-controls="pills-home" aria-selected="true">Rumah Sakit</a> </li>
                                                         <li class="nav-item"> <a class="nav-link py-3" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">SuperMarket</a> </li>
                                                         <li class="nav-item"> <a class="nav-link py-3" id="pills-contact-tab2" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Sekolah</a> </li>
                                                         <li class="nav-item"> <a class="nav-link py-3" id="pills-contact-tab3" data-toggle="pill" href="#pills-resturant" role="tab" aria-controls="pills-contact" aria-selected="false">Rumah Makan</a> </li>
                                                     </ul>
                                                     <div class="tab-content mt-4" id="pills-tabContent">
-                                                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home">
+                                                        <div class="tab-pane fade show active" id="rumah_sakit" role="tabpanel" aria-labelledby="pills-home">
                                                             <div class="row">
                                                                 <div class="col-lg-5 col-md-4">
                                                                     <div class="form-group">
