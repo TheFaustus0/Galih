@@ -26,7 +26,7 @@ class Kost_saya extends MX_Controller {
 	}
 	function edit_kost()
 	{
-		$this->m_kost->edit_kost();
+		$this->m_kost_saya->edit_kost();
 	}
 	function hapus(){
 		$this->m_kost_saya->hapus();

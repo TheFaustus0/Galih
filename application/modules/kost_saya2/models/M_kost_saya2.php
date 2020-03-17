@@ -36,21 +36,21 @@ class M_kost_saya2 extends CI_Model {
 		$rumah_skt=$this->input->post('rumah_sakit');
 		$jarak_1=$this->input->post('jarak_1');
 		$rumah_sakit = array('nama_tempat' => $rumah_skt, 'jarak' =>$jarak_1 );
-		$this->db->insert('t_rumah_sakit',$rumah_sakit);
+		$this->db->update('t_rumah_sakit',$rumah_sakit);
 		// // selesai
 
 		// // edit super market
 		$super_market=$this->input->post('super_market');
 		$jarak_2=$this->input->post('jarak_2');
 		$s_m = array('nama_tempat' => $super_market, 'jarak' =>$jarak_2 );
-		$this->db->insert('t_super_market',$s_m);
+		$this->db->update('t_super_market',$s_m);
 		// // selesai
 
 		// // edit sekolah
 		$sekolah=$this->input->post('sekolah');
 		$jarak_3=$this->input->post('jarak_3');
 		$sk = array('nama_tempat' => $sekolah, 'jarak' =>$jarak_3 );
-		$this->db->insert('t_sekolah',$sk);
+		$this->db->update('t_sekolah',$sk);
 		// // selesai
 
 		// rumah makan
@@ -58,7 +58,7 @@ class M_kost_saya2 extends CI_Model {
 		$jarak4=$this->input->post('jarak_4');
 
 		$rumah_makan = array('nama_tempat' => $r_makan, 'jarak'=>$jarak4 );
-		$this->db->insert('t_rumah_makan',$rumah_makan);
+		$this->db->update('t_rumah_makan',$rumah_makan);
 		// selesai
 
 		//input fasilitas
@@ -75,7 +75,7 @@ class M_kost_saya2 extends CI_Model {
 		$kamar_mandi_dalam=$this->input->post('kamar_mandi_dalam');
 
 		$fasilitas = array('wifi' => $wifi, 'listrik' => $listrik, 'kasur' => $kasur, 'air' => $air, 'lemari' => $lemari, 'kursi' => $kursi, 'tv' => $tv, 'water_heater' => $water_heater, 'dapur' => $dapur, 'kamar_mandi_luar' => $kamar_mandi_luar, 'kamar_mandi_dalam' => $kamar_mandi_dalam);
-		$this->db->insert('fasilitas_kost',$fasilitas);
+		$this->db->update('fasilitas_kost',$fasilitas);
 
 	     // upload gambar kost
 	     $this->load->library('upload');
@@ -95,7 +95,7 @@ class M_kost_saya2 extends CI_Model {
 				$foto = array(
 					'foto' 				=> $gambar['file_name'],
 				);
-		$this->db->insert('foto_kost', $foto);
+		$this->db->update('foto_kost', $foto);
 
 	     //mari wes kurang sing denah
 
@@ -117,11 +117,11 @@ $this->load->library('upload');
 				$data = array(
 					'denah' 				=> $gbr['file_name'],
 				);
-		$this->db->insert('t_lantai', $data);
-		 $this->db->insert('foto_kost',$foto);
+		$this->db->update('t_lantai', $data);
+		$this->db->update('foto_kost',$foto);
 		 
 
-		 $this->db->insert('t_kost',$data_kost);
+		 $this->db->update('t_kost',$data_kost);
 		 $this->db->where('id_kost',$id)->update('t_kost',$data_kost);
 	     // $this->db->insert('fasilitas_kost',$fas_kost);
 
