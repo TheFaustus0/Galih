@@ -81,7 +81,7 @@
                                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink"> <a class="dropdown-item" href="faq.html">Faq</a> <a class="dropdown-item" href="contact.html">Kontak</a> </div>
                                             </div>
                                              <div class="dropdown" style="margin-right:2%;"> <a class="dropdown-toggle hover-text-primary" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #ffffff;">Login</a>
-                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink"><a class="dropdown-item" href="login-pemilik.html">Pemilik</a><a class="dropdown-item" href="login-pencari.html">Pencari</a></div>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink"><a class="dropdown-item" href="<?php echo base_url('login/login_pemilik') ?>">Pemilik</a><a class="dropdown-item" href="<?php echo base_url('login/login_penyewa') ?>">Penyewa</a></div>
                                             </div>
                                         </div>
                                     </nav>
