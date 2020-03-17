@@ -21,9 +21,9 @@
                                         <div class="description">
                                             <h5 class="text-secondary">Informasi Kost :</h5>
                                             <hr>
-                                    <?php foreach($tampil as $res) {
-                                        $id_kost = $res->id_kost;
-                                    ?>
+                                            <?php foreach($tampil as $res) {
+                                               $id_kost = $res->id_kost;
+                                            ?>
                                             <div class="row">
                                                 <div class="col-lg-12 col-md-12">
                                                     <div class="form-group">

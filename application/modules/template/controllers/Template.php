@@ -20,6 +20,12 @@ class Template extends MX_Controller {
 		
 		$this->load->view('view_template_core');
 		$this->load->view('view_template_core_halaman_index');
+		$this->load->view('view_template_core_halaman_dashboard_pemilik');
+		$this->load->view('view_template_core_halaman_dashboard_pencari');
+		$this->load->view('view_template_core_detail_kamar');
+		$this->load->view('view_template_core_halaman_pemilik');
+		$this->load->view('view_template_core_halaman_pencari');
+
 	}
 
 	public function tampilCore($data)
@@ -41,5 +47,35 @@ class Template extends MX_Controller {
 		
 		$this->load->view('view_template_core_halaman_index',$data);
 	}
+	public function tampilCore_halaman_dashboard_pemilik($data)
+	{
+		$id = $this->session->userdata('session_id');
+		
+		$this->load->view('view_template_core_halaman_dashboard_pemilik' , $data);
+	}
+	public function tampilCore_halaman_dashboard_pencari($data)
+	{
+		$id = $this->session->userdata('session_id');
+		
+		$this->load->view('view_template_core_halaman_dashboard_pencari' , $data);
+	}
+	public function tampilCore_detail_kamar($data)
+	{
+		$id = $this->session->userdata('session_id');
+		
+		$this->load->view('view_template_core_detail_kamar' , $data);
+	}
+	public function tampilCore_halaman_pemilik($data)
+	{
+		$id = $this->session->userdata('session_id');
+		
+		$this->load->view('view_template_core_halaman_pemilik' , $data);
+	}
+	public function tampilCore_halaman_pencari($data)
+	{
+		$id = $this->session->userdata('session_id');
+		
+		$this->load->view('view_template_core_halaman_pencari' , $data);
+	}	
 
 }
