@@ -20,17 +20,25 @@ class Login extends MX_Controller {
 	}
 
 	function hal_pemilik(){
-		$rows = $this->db->query("SELECT * FROM t_login where no_telp='".$this->session->no_telp."'")->row_array();
-		echo $rows['nama'];
-
-
-		// $this->load->view('');
+			$rows = $this->db->query("SELECT * FROM t_login where no_telp='".$this->session->no_telp."'")->row_array();
+			$status=$rows['status'];
+		if($this->session->userdata('authenticated') && $status == 1){
+			redirect('halaman_pemilik');
+		}else{
+    		redirect('login/login_pemilik');
+		}	
 	}
 
 	function hal_penyewa(){
 		$rows = $this->db->query("SELECT * FROM t_login where no_telp='".$this->session->no_telp."'")->row_array();
-		echo $rows['nama'];
-		echo $rows['no_telp'];
+			$status=$rows['status'];
+
+		if($this->session->userdata('authenticated') && $status == 2){
+
+			redirect('halaman_pencari');
+		}else{
+    		redirect('login/login_penyewa');
+		}
 	}
 
 	function login_pemilik(){

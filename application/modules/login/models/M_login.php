@@ -6,6 +6,7 @@ Class M_login extends CI_Model {
 		parent::__construct();
     }
 
+
 	function cek($table,$where){
 		return $this->db->get_where($table,$where);
 	}
@@ -18,7 +19,8 @@ Class M_login extends CI_Model {
 		$user = array('nama' =>$username,
 					  'password'=>$password,
 					  'no_telp'=>$no_telp,
-					  'status'=>1
+					  'status'=>1,
+					  'foto_user'=>'default.png'
 					  
 		 );
 		$this->db->insert('t_login',$user);
@@ -33,7 +35,8 @@ Class M_login extends CI_Model {
 		$user = array('nama' =>$username,
 					  'password'=>$password,
 					  'no_telp'=>$no_telp,
-					  'status'=>2
+					  'status'=>2,
+					  'foto_user'=>'default.png'
 					  
 		 );
 		$this->db->insert('t_login',$user);

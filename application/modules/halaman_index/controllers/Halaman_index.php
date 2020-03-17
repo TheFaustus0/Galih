@@ -8,7 +8,7 @@ class Halaman_index extends MX_Controller {
 		parent::__construct();
 		// model
 		 $this->load->model('m_halaman_index');
-		 /*$this->load->model('login/m_session');*/
+		 $this->load->model('login/m_login');
 	}
 
 	

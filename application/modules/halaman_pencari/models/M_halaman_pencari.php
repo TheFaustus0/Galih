@@ -7,11 +7,6 @@ class M_halaman_pencari extends CI_Model {
 	{
 		return $this->db->get('t_login')->result();
 	}
-	function input_pemilik(){
 
-	}
-	function input_pencari(){
-
-	}
 
 }

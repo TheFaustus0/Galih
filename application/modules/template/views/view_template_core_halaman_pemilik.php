@@ -50,8 +50,14 @@
 --> 
 
 
+<?php 
+            $rows = $this->db->query("SELECT * FROM t_login where no_telp='".$this->session->no_telp."'")->row_array();
+            $id=$rows['id_user'];
+            
+ ?>
 
-<div id="page-wrapper">
+
+  <div id="page-wrapper">
     <div class="row"> 
         <!--    Header One
         =============================================================-->
@@ -87,25 +93,21 @@
                                             <div class="col-lg-4">
                                                 <div class="dashboard-top-right float-left float-lg-right mt-2 mt-lg-0">
                                                     <!-- <div class="text-white float-left mr-4">Balance: <span class="text-primary">$34580.00</span></div> -->
-                                                    <div class="dropdown float-left"> <a class="dropdown-toggle text-white" href="#" role="button" id="dropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <img src="assets/images/team/p.jpeg" alt="">God Zaenal Abidin </a>
-                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2"> <a class="dropdown-item" href="<?php echo base_url('kost'); ?>">Tambah Kost</a><a class="dropdown-item" href="<?php echo base_url('halaman_dashboard'); ?>">dasboard</a> <a class="dropdown-item" href="<?php echo base_url('halaman_index'); ?>">Keluar</a> </div>
+                                                    <div class="dropdown float-left"> <a class="dropdown-toggle text-white" href="#" role="button" id="dropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <img src="<?php echo base_url('assets/images/foto_login/'.$rows['foto_user']); ?>" alt=""><?php echo $rows['nama']; ?></a>
+                                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2"> <a class="dropdown-item" href="<?php echo base_url('kost'); ?>">Tambah Kost</a><a class="dropdown-item" href="<?php echo base_url('halaman_dashboard'); ?>">dasboard</a> <a class="dropdown-item" href="<?php echo base_url('halaman_pemilik/log_out'); ?>">Keluar</a> </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                             <!-- <div class="dropdown" style="margin-right:2%;"> <a class="dropdown-toggle hover-text-primary" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #ffffff;">Login</a>
-                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink"><a class="dropdown-item" href="login-pemilik.html">Pemilik</a><a class="dropdown-item" href="login-penyewa.html">Pencari</a></div>
-                                            </div> -->
-                                        <<!-- /div>  -->
                                     </nav>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </header>
-        
         <!-- Slider HTML markup -->
         <div class="full-row overflow-hidden p-0">
             <div id="image-slider-2" style="width:1200px; height:800px;"> 
