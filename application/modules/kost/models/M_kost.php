@@ -58,21 +58,21 @@ class M_kost extends CI_Model {
 		// // input rumah sakit
 		$rumah_skt=$this->input->post('rumah_sakit');
 		$jarak_1=$this->input->post('jarak_1');
-		$rumah_sakit = array('nama_tempat' => $rumah_skt, 'jarak' =>$jarak_1 );
+		$rumah_sakit = array('nama_tempat_sakit' => $rumah_skt, 'jarak_sakit' =>$jarak_1 );
 		$this->db->insert('t_rumah_sakit',$rumah_sakit);
 		// // selesai
 
 		// // input super market
 		$super_market=$this->input->post('super_market');
 		$jarak_2=$this->input->post('jarak_2');
-		$s_m = array('nama_tempat' => $super_market, 'jarak' =>$jarak_2 );
+		$s_m = array('nama_tempat_market' => $super_market, 'jarak_market' =>$jarak_2 );
 		$this->db->insert('t_super_market',$s_m);
 		// // selesai
 
 		// // input sekolah
 		$sekolah=$this->input->post('sekolah');
 		$jarak_3=$this->input->post('jarak_3');
-		$sk = array('nama_tempat' => $sekolah, 'jarak' =>$jarak_3 );
+		$sk = array('nama_tempat_sekolah' => $sekolah, 'jarak_sekolah' =>$jarak_3 );
 		$this->db->insert('t_sekolah',$sk);
 		// // selesai
 
@@ -80,7 +80,7 @@ class M_kost extends CI_Model {
 		$r_makan=$this->input->post('rumah_makan');
 		$jarak4=$this->input->post('jarak_4');
 
-		$rumah_makan = array('nama_tempat' => $r_makan, 'jarak'=>$jarak4 );
+		$rumah_makan = array('nama_tempat_makan' => $r_makan, 'jarak_makan'=>$jarak4 );
 		$this->db->insert('t_rumah_makan',$rumah_makan);
 		// selesai
 

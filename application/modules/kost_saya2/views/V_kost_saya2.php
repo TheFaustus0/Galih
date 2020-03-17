@@ -8,11 +8,6 @@
                                             <hr>
                                             <div class="row">
                                                 <div class="col-md-12">
-                                                    <ul class="nav nav-pills mb-3 bg-gray" id="pills-tab" role="tablist">
-                                                        <li class="nav-item"  style="margin-left: 20%;"> <a class="nav-link py-3 active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Data Kost</a> </li>
-                                                        <li></li>
-                                                        <li class="nav-item"  style="margin-left: 20%;"> <a class="nav-link py-3" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Data Kamar</a> </li>
-                                                    </ul>
                                                     <div class="tab-content mt-4" id="pills-tabContent">
                                                         <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home">
                                                             <div class="row">
@@ -100,8 +95,9 @@
                                             <div class="row">
                                                 <div class="col-lg-12 col-md-12">
                                                     <div class="form-group">
+
                                                         <label>Deskripsi</label>
-                                                        <textarea class="form-control bg-gray" rows="8" name="deskripsi"><?php $res->deskripsi ?></textarea>
+                                                        <textarea class="form-control bg-gray" rows="8" name="deskripsi"><?php echo $res->deskripsi ?></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -125,7 +121,7 @@
                                             <div class="row">
                                                 <div class="col-lg-3">
                                                        <div class="custom-control custom-checkbox">
-                                                          <input type="checkbox" class="custom-control-input" id="wifi" name="wifi">
+                                                          <input type="checkbox" class="custom-control-input" id="wifi" name="wifi" value="">
                                                           <label class="custom-control-label" for="wifi"><i class="fa fa-wifi"></i>&nbsp;Wifi</label>
                                                         </div>
                                                         <div class="custom-control custom-checkbox">
@@ -267,12 +263,12 @@
                                                             <div class="row">
                                                                 <div class="col-lg-5 col-md-4">
                                                                     <div class="form-group">
-                                                                        <input type="text" name="rumah_sakit" class="form-control" placeholder="Name of the places">
+                                                                        <input type="text" name="rumah_sakit" class="form-control" placeholder="Name of the places" value="<?php echo $res->nama_tempat_sakit ?>">
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-2 col-md-2">
                                                                     <div class="form-group">
-                                                                        <input type="text" name="jarak_1" class="form-control" placeholder="Distance (km)">
+                                                                        <input type="text" name="jarak_1" class="form-control" placeholder="Distance (km)" value="<?php echo $res->jarak_sakit ?>">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -281,12 +277,12 @@
                                                             <div class="row">
                                                                 <div class="col-lg-5 col-md-4">
                                                                     <div class="form-group">
-                                                                        <input type="text" name="super_market" class="form-control" placeholder="Name of the places">
+                                                                        <input type="text" name="super_market" class="form-control" placeholder="Name of the places" value="<?php echo $res->nama_tempat_market ?>">
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-2 col-md-2">
                                                                     <div class="form-group">
-                                                                        <input type="text" name="jarak_2" class="form-control" placeholder="Distance (km)">
+                                                                        <input type="text" name="jarak_2" class="form-control" placeholder="Distance (km)"  value="<?php echo $res->jarak_market ?>">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -295,12 +291,12 @@
                                                             <div class="row">
                                                                 <div class="col-lg-5 col-md-4">
                                                                     <div class="form-group">
-                                                                        <input type="text" name="sekolah" class="form-control" placeholder="Name of the places">
+                                                                        <input type="text" name="sekolah" class="form-control" placeholder="Name of the places" value="<?php echo $res->nama_tempat_sekolah ?>">
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-2 col-md-2">
                                                                     <div class="form-group">
-                                                                        <input type="text" name="jarak_3" class="form-control" placeholder="Distance (km)">
+                                                                        <input type="text" name="jarak_3" class="form-control" placeholder="Distance (km)" value="<?php echo $res->jarak_sekolah ?>">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -309,12 +305,12 @@
                                                             <div class="row">
                                                                 <div class="col-lg-5 col-md-4">
                                                                     <div class="form-group">
-                                                                        <input type="text" name="rumah_makan" class="form-control" placeholder="Name of the places">
+                                                                        <input type="text" name="rumah_makan" class="form-control" placeholder="Name of the places" value="<?php echo $res->nama_tempat_makan ?>">
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-2 col-md-2">
                                                                     <div class="form-group">
-                                                                        <input type="text" name="jarak_4" class="form-control" placeholder="Distance (km)">
+                                                                        <input type="text" name="jarak_4" class="form-control" placeholder="Distance (km)"  value="<?php echo $res->jarak_makan ?>">
                                                                     </div>
                                                                 </div>
                                                             </div>
