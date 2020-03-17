@@ -1,4 +1,3 @@
-
 <div class="col-md-12 col-xl-10">
                         <div class="row">
                             <div class="dashboard-panel w-100">
@@ -18,10 +17,10 @@
                                     <?php foreach($tampil as $key) {
                                         $id_kamar = $key->id_kamar; ?>
                                         <tr>
-                                            <td><img src="assets/images/thumbnail/2.jpg" alt="">
+                                            <td><img src="<?php echo base_url() ?>assets/images/foto_kamar/<?php echo $key->foto?>" alt="profile-photo" class="img-fluid">
                                                 <div class="property-info d-table">
-                                                    <h5 class="text-secondary"><?php echo $key->nama_kamar ?></h5>
-                                                    <span class="font-14"><i class="">Block 1-A</i> </span>
+                                                    <h5 class="text-secondary">Bunga Kost</h5>
+                                                    <span class="font-14"><i class=""><?php echo $key->nama_kamar ?></i> </span>
                                                    <!--  <div class="price mt-3"> <span class="text-primary">Rp 500.000</span></div> -->
                                                 </div></td>
                                             <td>10 Jan, 2019</td>
