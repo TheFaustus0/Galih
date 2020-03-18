@@ -5,15 +5,12 @@ class M_ubah_kamar extends CI_Model {
 
 	function tampil()
 	{
-		// return $this->db->get('t_kost')->result();
-
 		 $this->db->select('*');
 		 $this->db->from('t_kamar');
 		 $this->db->join('foto_kamar','foto_kamar.id_foto_kamar=t_kamar.id_foto_kamar');
 		 $this->db->join('fasilitas_kamar','fasilitas_kamar.id_fasilitas_kamar=t_kamar.id_fasilitas_kamar');
 		 $query = $this->db->get();
 		 return $query->result();
-
 	}
 	function edit(){
 			//input data kost
@@ -37,6 +34,7 @@ class M_ubah_kamar extends CI_Model {
 							'perminggu'=>$perminggu,
 							'perbulan'=>$perbulan,
 							'pertahun'=>$pertahun,
+							
 							 );
 		
 		$this->db->where('id_kamar',$id_kamar)->update('t_kamar', $data_kamar);
@@ -64,12 +62,12 @@ class M_ubah_kamar extends CI_Model {
 							'dapur' =>$dapur, 
 						);
 
-		$this->db->insert('fasilitas_kamar',$fasilitas_kamar);
+		$this->db->update('fasilitas_kamar',$fasilitas_kamar);
 		// // selesai
 
 		$this->load->library('upload');
 		$nmfile = "file_".time();
-		$config['upload_path']		= './assets/images/foto_kamar/';
+		$config['upload_path']		= './assets/images/foto kamar/';
 		$config['allowed_types']	= 'gif|jpg|png|jpeg';
 		$config['max_size']			= 5120;
 		$config['max_width']		= 4300;
@@ -83,14 +81,16 @@ class M_ubah_kamar extends CI_Model {
 		$this->upload->do_upload('foto_kamar4');
 		$this->upload->do_upload('foto_kamaer5');
 		$this->upload->do_upload('foto_kamar6');
-
 		$gambar = $this->upload->data();
 				$foto = array(
 					'foto' 				=> $gambar['file_name'],
 				);
 				$this->db->update('foto_kamar', $foto);
 
-
+function hapus()
+	{
+		$this->db->where('id_kamar', $id)->delete('t_kamar');
+	}
 
 	}
 

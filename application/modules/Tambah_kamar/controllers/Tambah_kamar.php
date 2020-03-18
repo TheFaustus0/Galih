@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class tambah_kamar extends MX_Controller {
+class Tambah_kamar extends MX_Controller {
 
 	function __construct()
 	{

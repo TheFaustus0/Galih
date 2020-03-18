@@ -25,6 +25,10 @@ class Ubah_kamar extends MX_Controller {
 		$this->m_ubah_kamar->edit();
         redirect('kamar_saya');
 	}
+    function hapus(){
+		$this->m_ubah_kamar->hapus();
+
+	}
 
 
 	}
