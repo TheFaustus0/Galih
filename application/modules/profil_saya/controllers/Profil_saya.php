@@ -11,7 +11,6 @@ class Profil_saya extends MX_Controller {
 		//  $this->load->model('login/m_session');
 	}
 
-	
 	// index
 	function index()
 	{

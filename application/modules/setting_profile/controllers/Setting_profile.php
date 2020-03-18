@@ -21,7 +21,7 @@ class Setting_profile extends MX_Controller {
 			'namafileview' 	=> "V_setting_profile",
 			'tampil'		=> $this->m_setting_profile ->tampil(), 
 		);
-		echo Modules::run('template/tampilCore2', $data);
+		echo Modules::run('template/tampilCore_halaman_dashboard_pemilik', $data);
 	}
 	function edit(){
 		$this->m_setting_profile->edit();
