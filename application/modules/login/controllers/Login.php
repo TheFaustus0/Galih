@@ -84,8 +84,6 @@ class Login extends MX_Controller {
 
 			$this->session->set_userdata($data_session);
 			redirect('login/hal_pemilik');
-
-			
  
 		}else{
 			echo "<script>alert('Username Atau password Anda Salah ');window.location='login/login_pemilik';</script>";
