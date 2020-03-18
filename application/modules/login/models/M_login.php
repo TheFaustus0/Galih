@@ -21,7 +21,6 @@ Class M_login extends CI_Model {
 					  'no_telp'=>$no_telp,
 					  'status'=>1,
 					  'foto_user'=>'default.png'
-					  
 		 );
 		$this->db->insert('t_login',$user);
 		echo "<script>alert('Berhasil Register, Silahkan Login ');window.location='login/login_pemilik';</script>";
