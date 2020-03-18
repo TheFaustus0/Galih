@@ -3,11 +3,17 @@
                             <div class="dashboard-panel w-100">
                                 <h4 class="text-secondary mb-4">Ubah Data</h4>
                                 <div class="submit-form p-5 bg-white">
-                                <form method="post"  action="<?php echo base_url().'kost/edit_kost' ?>" enctype="multipart/form-data">
+                                <form method="post"  action="<?php echo base_url().'kost_saya/edit_kost' ?>" enctype="multipart/form-data">
+                              
                                     <div class="upload-media mt-5">
                                             <hr>
                                             <div class="row">
                                                 <div class="col-md-12">
+                                                    <ul class="nav nav-pills mb-3 bg-gray" id="pills-tab" role="tablist">
+                                                        <li class="nav-item"  style="margin-left: 20%;"> <a class="nav-link py-3 active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Data Kost</a> </li>
+                                                        <li></li>
+                                                        <li class="nav-item"  style="margin-left: 20%;"> <a class="nav-link py-3" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Data Kamar</a> </li>
+                                                    </ul>
                                                     <div class="tab-content mt-4" id="pills-tabContent">
                                                         <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home">
                                                             <div class="row">
@@ -16,9 +22,9 @@
                                         <div class="description">
                                             <h5 class="text-secondary">Informasi Kost :</h5>
                                             <hr>
-                                            <?php foreach($tampil as $res) {
-                                               $id_kost = $res->id_kost;
-                                            ?>
+                                    <?php foreach($tampil as $res) {
+                                        $id_kost = $res->id_kost;
+                                    ?>
                                             <div class="row">
                                                 <div class="col-lg-12 col-md-12">
                                                     <div class="form-group">
@@ -95,9 +101,8 @@
                                             <div class="row">
                                                 <div class="col-lg-12 col-md-12">
                                                     <div class="form-group">
-
                                                         <label>Deskripsi</label>
-                                                        <textarea class="form-control bg-gray" rows="8" name="deskripsi"><?php echo $res->deskripsi ?></textarea>
+                                                        <textarea class="form-control bg-gray" rows="8" name="deskripsi"><?php $res->deskripsi ?></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -121,53 +126,53 @@
                                             <div class="row">
                                                 <div class="col-lg-3">
                                                        <div class="custom-control custom-checkbox">
-                                                          <input type="checkbox" class="custom-control-input" id="wifi" name="wifi" value="">
-                                                          <label class="custom-control-label" for="wifi"><i class="fa fa-wifi"></i>&nbsp;Wifi</label>
+                                                          <input type="checkbox" class="custom-control-input" id="wifi" name="wifi">
+                                                          <label class="custom-control-label" for="wifi" ><i class="fa fa-wifi"></i>&nbsp;Wifi</label>
                                                         </div>
                                                         <div class="custom-control custom-checkbox">
-                                                          <input type="checkbox" class="custom-control-input" id="Listrik" name="listrik">
+                                                          <input type="checkbox" class="custom-control-input" id="Listrik" name="listrik" value="<?php echo $res->listrik ?>">
                                                           <label class="custom-control-label" for="Listrik"><i class="fa fa-bolt"></i>&nbsp;Listrik</label>
                                                         </div>
                                                         <div class="custom-control custom-checkbox">
-                                                          <input type="checkbox" class="custom-control-input" id="kasur" name="kasur">
+                                                          <input type="checkbox" class="custom-control-input" id="kasur" name="kasur" value="<?php echo $res->kasur ?>">
                                                           <label class="custom-control-label" for="kasur"><i class="fa fa-bed"></i>&nbsp;Kasur</label>
                                                         </div>
                                                 </div>
                                                 <div class="col-lg-3">
                                                         <div class="custom-control custom-checkbox">
-                                                          <input type="checkbox" class="custom-control-input" id="air" name="air">
+                                                          <input type="checkbox" class="custom-control-input" id="air" name="air" value="<?php echo $res->air ?>">
                                                           <label class="custom-control-label" for="air"><i class="fa fa-tint"></i>&nbsp;Air</label>
                                                         </div>
                                                         <div class="custom-control custom-checkbox">
-                                                          <input type="checkbox" class="custom-control-input" id="lemari" name="lemari">
+                                                          <input type="checkbox" class="custom-control-input" id="lemari" name="lemari" value="<?php echo $res->lemari ?>">
                                                           <label class="custom-control-label" for="lemari"><i class="fa fa-server"></i>&nbsp;Lemari</label>
                                                         </div>
                                                         <div class="custom-control custom-checkbox">
-                                                          <input type="checkbox" class="custom-control-input" id="kursi" name="kursi">
+                                                          <input type="checkbox" class="custom-control-input" id="kursi" name="kursi" value="<?php echo $res->kursi ?>">
                                                           <label class="custom-control-label" for="kursi"><i class="fa fa-couch"></i>&nbsp;Kursi</label>
                                                         </div>
                                                 </div>
                                                 <div class="col-lg-3">
                                                         <div class="custom-control custom-checkbox">
-                                                          <input type="checkbox" class="custom-control-input" id="tv" name="tv">
+                                                          <input type="checkbox" class="custom-control-input" id="tv" name="tv" value="<?php echo $res->tv ?>">
                                                           <label class="custom-control-label" for="tv"><i class="fa fa-tv"></i>&nbsp;TV</label>
                                                         </div>
                                                         <div class="custom-control custom-checkbox">
-                                                          <input type="checkbox" class="custom-control-input" id="heater" name="water_heater">
+                                                          <input type="checkbox" class="custom-control-input" id="heater" name="water_heater" value="<?php echo $res->water_heater ?>">
                                                           <label class="custom-control-label" for="heater"><i class="fa fa-dumpster-fire"></i>&nbsp;Water Heater</label>
                                                         </div>
                                                         <div class="custom-control custom-checkbox">
-                                                          <input type="checkbox" class="custom-control-input" id="dapur" name="dapur">
+                                                          <input type="checkbox" class="custom-control-input" id="dapur" name="dapur" value="<?php echo $res->dapur ?>">
                                                           <label class="custom-control-label" for="dapur"><i class="fa fa-oven"></i>Dapur</label>
                                                         </div>
                                                 </div>
                                                     <div class="col-lg-">
                                                         <div class="custom-control custom-checkbox">
-                                                          <input type="checkbox" class="custom-control-input" id="luar" name="kamar_mandi_luar">
+                                                          <input type="checkbox" class="custom-control-input" id="luar" name="kamar_mandi_luar" value="<?php echo $res->kamar_mandi_luar ?>">
                                                           <label class="custom-control-label" for="luar"><i class="fa fa-bath"></i>&nbsp;Kamar Mandi Luar</label>
                                                         </div>
                                                         <div class="custom-control custom-checkbox">
-                                                          <input type="checkbox" class="custom-control-input" id="dalam" name="kamar_mandi_dalam">
+                                                          <input type="checkbox" class="custom-control-input" id="dalam" name="kamar_mandi_dalam" value="<?php echo $res->kamar_mandi_dalam ?>">
                                                           <label class="custom-control-label" for="dalam"><i class="fa fa-bath"></i>&nbsp;Kamar Mandi dalam</label>
                                                         </div>
                                                     </div>
@@ -186,6 +191,7 @@
                                                                 <div class="browse-submit">
                                                                    <input type="file" class="dropify" id="images" name="denah_1" onchange="preview_images();" multiple/>
                                                                     <div class="row" id="image_preview"></div>
+                                                                    <img  src="<?= base_url(); ?>assets/images/denah/<?= $res->nama_tempat ?>" width="150px" />
                                                                 </div>
 
                                                             </div>
@@ -199,6 +205,7 @@
                                                                 <div class="browse-submit">
                                                                    <input type="file" class="dropify" id="images" name="denah_2" onchange="preview_images();" multiple/>
                                                                     <div class="row" id="image_preview"></div>
+                                                                    
                                                                 </div>
 
                                                             </div>
@@ -237,7 +244,8 @@
                                             <hr>
                                             <div class="row">
                                                 <div class="col-md-4">
-                                               <input type="file" class="dropify" id="images" name="foto_kost"  multiple/>
+                                               <input type="file" class="dropify" id="images" name="foto_kost"  onchange="preview_images();" multiple/>
+                                               <img  src="<?= base_url(); ?>assets/images/foto_kost/<?= $res->foto ?>" width="150px" />
                                                 </div>
                                                 <div class="col-md-4">
                                                <input type="file" class="dropify" id="images" name="foto_kost2"  multiple/>
@@ -263,12 +271,12 @@
                                                             <div class="row">
                                                                 <div class="col-lg-5 col-md-4">
                                                                     <div class="form-group">
-                                                                        <input type="text" name="rumah_sakit" class="form-control" placeholder="Name of the places" value="<?php echo $res->nama_tempat_sakit ?>">
+                                                                        <input type="text" name="rumah_sakit" class="form-control" placeholder="Name of the places" value="<?php echo $res->nama_tempat?>">
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-2 col-md-2">
                                                                     <div class="form-group">
-                                                                        <input type="text" name="jarak_1" class="form-control" placeholder="Distance (km)" value="<?php echo $res->jarak_sakit ?>">
+                                                                        <input type="text" name="jarak_1" class="form-control" placeholder="Distance (km)"value="<?php echo $res->jarak?>">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -277,12 +285,12 @@
                                                             <div class="row">
                                                                 <div class="col-lg-5 col-md-4">
                                                                     <div class="form-group">
-                                                                        <input type="text" name="super_market" class="form-control" placeholder="Name of the places" value="<?php echo $res->nama_tempat_market ?>">
+                                                                        <input type="text" name="super_market" class="form-control" placeholder="Name of the places" value="<?php echo $res->nama_tempat?>">
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-2 col-md-2">
                                                                     <div class="form-group">
-                                                                        <input type="text" name="jarak_2" class="form-control" placeholder="Distance (km)"  value="<?php echo $res->jarak_market ?>">
+                                                                        <input type="text" name="jarak_2" class="form-control" placeholder="Distance (km)"value="<?php echo $res->jarak?>">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -291,12 +299,12 @@
                                                             <div class="row">
                                                                 <div class="col-lg-5 col-md-4">
                                                                     <div class="form-group">
-                                                                        <input type="text" name="sekolah" class="form-control" placeholder="Name of the places" value="<?php echo $res->nama_tempat_sekolah ?>">
+                                                                        <input type="text" name="sekolah" class="form-control" placeholder="Name of the places"value="<?php echo $res->nama_tempat?>">
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-2 col-md-2">
                                                                     <div class="form-group">
-                                                                        <input type="text" name="jarak_3" class="form-control" placeholder="Distance (km)" value="<?php echo $res->jarak_sekolah ?>">
+                                                                        <input type="text" name="jarak_3" class="form-control" placeholder="Distance (km)"value="<?php echo $res->jarak?>">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -305,12 +313,12 @@
                                                             <div class="row">
                                                                 <div class="col-lg-5 col-md-4">
                                                                     <div class="form-group">
-                                                                        <input type="text" name="rumah_makan" class="form-control" placeholder="Name of the places" value="<?php echo $res->nama_tempat_makan ?>">
+                                                                        <input type="text" name="rumah_makan" class="form-control" placeholder="Name of the places"value="<?php echo $res->nama_tempat?>">
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-2 col-md-2">
                                                                     <div class="form-group">
-                                                                        <input type="text" name="jarak_4" class="form-control" placeholder="Distance (km)"  value="<?php echo $res->jarak_makan ?>">
+                                                                        <input type="text" name="jarak_4" class="form-control" placeholder="Distance (km)"value="<?php echo $res->jarak?>">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -337,7 +345,7 @@
                                             
                                             <!-- Modal body -->
                                             <div class="modal-body">
-                                                Apakah Anda Yakin Dengan Data Yang Anda Isi ?
+                                                Apakah anda yakin untuk mengubah data ini ?
                                             </div>
                                             
                                             <!-- Modal footer -->

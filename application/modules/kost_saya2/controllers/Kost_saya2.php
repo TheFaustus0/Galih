@@ -24,7 +24,7 @@ class Kost_saya2 extends MX_Controller {
 	}
 	function edit_kost()
 	{
-		$this->m_kost->edit_kost();
+		$this->m_kost_saya2->edit_kost();
 	}
 }
 ?>
