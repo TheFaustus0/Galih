@@ -8,7 +8,7 @@ class Profil_saya extends MX_Controller {
 		parent::__construct();
 		// model
 		 $this->load->model('m_profil_saya');
-		 $this->load->model('login/m_session');
+		//  $this->load->model('login/m_session');
 	}
 
 	
@@ -20,15 +20,15 @@ class Profil_saya extends MX_Controller {
 			'namafileview' 	=> "V_profil_saya",
 			'tampil'		=> $this->m_profil_saya ->tampil(), 
 		);
-		echo Modules::run('template/tampilCore2', $data);
+		echo Modules::run('template/tampilCore3', $data);
 	}
-	/*function edit(){
-		$this->m_setting_profile->edit();
-		redirect('profil_saya');
-	}
+	// function edit(){
+	// 	$this->m_profil_saya->edit();
+	// 	redirect('profil_saya');
+	// }
 
-	function password(){
-		$this->m_setting_profile->edit_password();
-	}*/
+	// function password(){
+	// 	$this->m_profil_saya->password();
+	// }
 }
 ?>
