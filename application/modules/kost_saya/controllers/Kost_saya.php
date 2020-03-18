@@ -24,9 +24,14 @@ class Kost_saya extends MX_Controller {
 		);
 		echo Modules::run('template/tampilCore3', $data);
 	}
-	function edit_kost()
-	{
-		$this->m_kost_saya->edit_kost();
+	function edit_kost($id)
+	{	
+		$data = array(
+			'namamodule' 	=> "kost_saya",
+			'namafileview' 	=> "V_kost_saya2",
+			'tampil'		=> $this->m_kost_saya->edit($id),
+		);
+		echo Modules::run('template/tampilCoreedit', $data);
 	}
 	function hapus(){
 		$this->m_kost_saya->hapus();

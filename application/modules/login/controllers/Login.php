@@ -71,7 +71,10 @@ class Login extends MX_Controller {
 		$no_telp= $this->input->post('no_telp');
 		$password= $this->input->post('password');
 
+		$query = $this->db->query('SELECT *FROM t_login  where no_telp='$no_telp' ');
+
 		$where = array('no_telp' => $no_telp,'password' => $password,'status'=>1);
+
 		$cek = $this->m_login->cek('t_login',$where)->num_rows();
 		if($cek == 1){
 			$data_session = array(
@@ -84,8 +87,6 @@ class Login extends MX_Controller {
 
 			$this->session->set_userdata($data_session);
 			redirect('login/hal_pemilik');
-
-			
  
 		}else{
 			echo "<script>alert('Username Atau password Anda Salah ');window.location='login/login_pemilik';</script>";
