@@ -40,6 +40,12 @@ class Template extends MX_Controller {
 		
 		$this->load->view('view_template_core3',$data);
 	}
+		public function tampilCoreedit($data)
+	{
+		$id = $this->session->userdata('session_id');
+		
+		$this->load->view('view_template_core3',$data);
+	}
 		public function tampilCore_halaman_index($data)
 	{
 		$id = $this->session->userdata('session_id');

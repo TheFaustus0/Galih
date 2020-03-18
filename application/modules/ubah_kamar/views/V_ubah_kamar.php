@@ -16,7 +16,7 @@
                           
                                     <input type="hidden" name="id_kamar" value="<?php echo $key->id_kamar; ?>">
                                                      <div class="accordion mt-4" id="accordionExample">
-                                                       
+                                                  
                                                       <div class="col-md-12 col-xl-12">
                                                           <div class="row">
                                                               <div class="dashboard-panel w-100">
@@ -49,7 +49,7 @@
                                                                                       <div class="form-group">
                                                                                           <label>Tipe Kost :</label>
                                                                                           <select class="form-control" name="gender">
-                                                                                              <option><?= $key->tipe_kost ?> </option>
+                                                                                              <option><?php echo $key->tipe_kost; ?></option>
                                                                                               <option value="laki-laki">Laki - Laki</option>
                                                                                               <option value="wanita">Wanita</option>
                                                                                           </select>
@@ -65,7 +65,7 @@
                                                                                   <div class="col-lg-12 col-md-12">
                                                                                       <div class="form-group">
                                                                                           <label>Deskripsi</label>
-                                                                  <textarea class="form-control bg-gray" placeholder="Write Details..." rows="6" name="deskripsi_kamar"><?php echo $key->deskripsi; ?></textarea>
+                                                                  <textarea class="form-control bg-gray" placeholder="Write Details..." rows="6" name="deskripsi_kamar"></textarea>
                                                                                       </div>
                                                                                   </div>
                                                                               </div>

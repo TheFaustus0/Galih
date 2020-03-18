@@ -85,7 +85,7 @@
                             <div class="dashboard-sidebar flat-small py-4 w-100">
                                 <h6 class="text-primary border-bottom-gray pb-3 my-2 pl-3 d-md-none d-xl-block">Dasboard Pemilik</h6>
                                 <ul class="mb-4 text-white">
-                                    <li><a href="dashboard-massanger-pemilik.html"><i class="flaticon-dashboard mr-3 mr-md-0 mr-xl-3"></i><span class="d-md-none d-xl-block">Dashboard</span></a></li>
+                                    <li><a href="<?php echo base_url('halaman_dashboard'); ?>"><i class="flaticon-dashboard mr-3 mr-md-0 mr-xl-3"></i><span class="d-md-none d-xl-block">Dashboard</span></a></li>
                                     <li><a href="dashboard-message-pemilik.html"><i class="flaticon-email mr-3 mr-md-0 mr-xl-3"></i><span class="d-md-none d-xl-block">Pesan</span><sup class="text-primary">(05)</sup></a></li>
                                     <li><a href="dashboard-comment-pemilik.html"><i class="flaticon-chat-comment-oval-speech-bubble-with-text-lines mr-3 mr-md-0 mr-xl-3"></i><span class="d-md-none d-xl-block">Komentar</span><sup class="text-primary">(12)</sup></a></li>
                                 </ul>
@@ -93,6 +93,7 @@
                                 <ul class="mb-4 text-white">
                                     <li><a href="dashboard-booking-pemilik.html"><i class="flaticon-calendar mr-3 mr-md-0 mr-xl-3"></i><span class="d-md-none d-xl-block">Kos Yang Tersewa</span></a></li>
                                     <li><a href="dashboard-listing-pemilik.html"><i class="flaticon-house-1 mr-3 mr-md-0 mr-xl-3"></i><span class="d-md-none d-xl-block">Kos Saya</span></a></li>
+                                    <li><a href="<?php echo base_url('kamar_saya'); ?>"><i class="flaticon-house-1 mr-3 mr-md-0 mr-xl-3"></i><span class="d-md-none d-xl-block">Kamar Saya</span></a></li>
                                     <li><a href="dashboard-faktur-pemilik.html"><i class="flaticon-bill mr-3 mr-md-0 mr-xl-3"></i><span class="d-md-none d-xl-block">Faktur</span></a></li>
                                     <li><a href="dashboard-pemesanan-pemilik.html"><i class="flaticon-tax mr-3 mr-md-0 mr-xl-3"></i><span class="d-md-none d-xl-block">Permintaan Pemesanan</span></a></li>
                                     <li><a href="dashboard-submit-property.html"><i class="flaticon-forward mr-3 mr-md-0 mr-xl-3"></i><span class="d-md-none d-xl-block">Tambah Kost</span></a></li>
@@ -109,7 +110,7 @@
                      <?php
                          $this->load->view($namamodule .'/'.$namafileview);
                      ?>
-                            <div class="dashboard-copyright bg-white py-4 text-center w-100"><p style="color: green;">© 2020 Rajakost</p></div>
+                           <div class="dashboard-copyright bg-white py-4 text-center w-100">© 2020 Rajakost</div>
                         </div>
                     </div>
                 </div>
