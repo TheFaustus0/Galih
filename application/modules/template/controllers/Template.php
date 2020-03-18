@@ -25,7 +25,6 @@ class Template extends MX_Controller {
 		$this->load->view('view_template_core_detail_kamar');
 		$this->load->view('view_template_core_halaman_pemilik');
 		$this->load->view('view_template_core_halaman_pencari');
-
 	}
 
 	public function tampilCore($data)
