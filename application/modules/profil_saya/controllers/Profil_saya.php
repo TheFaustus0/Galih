@@ -8,7 +8,7 @@ class Profil_saya extends MX_Controller {
 		parent::__construct();
 		// model
 		 $this->load->model('m_profil_saya');
-		 $this->load->model('login/m_session');
+		 // $this->load->model('login/m_session');
 	}
 
 	

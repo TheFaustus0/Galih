@@ -21,6 +21,7 @@
                                             <td><img src="assets/images/thumbnail/2.jpg" alt="">
                                                 <div class="property-info d-table">
                                                     <h5 class="text-secondary"><?php echo $res->nama_kost ?></h5>
+                                                    <input type="hidden" name="id_kost" value="<?php echo $res->id_kost ?>">
                                                     <span class="font-14"><i class="">Block 1-A</i> </span>
                                                    <!--  <div class="price mt-3"> <span class="text-primary">Rp 500.000</span></div> -->
                                                 </div></td>
@@ -28,7 +29,7 @@
                                             <!-- <td>34</td> -->
                                             <!-- <td>5 Comments</td> -->
                                             <td>
-                                            <a href="<?php echo base_url().'kost_saya2'?>" class="btn btn-outline-info mr-1 mb-1">Ubah</a> 
+                                            <a href="<?php echo base_url().'kost_saya/edit_kost/'.$id_kost?>" class="btn btn-outline-info mr-1 mb-1">Ubah</a> 
                                             <a data-toggle="modal" data-target="#hapus"class="btn btn-outline-danger mb-1">Hapus</a>
                                             </td>
                                         </tr>
