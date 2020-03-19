@@ -5,7 +5,7 @@
                                 <div class="submit-form p-5 bg-white">
                                   <center><h5 class="text-secondary mb-5">Ubah Kamar Sesuai Denah Lantai </h5></center>
                                                 <?php foreach ($tampil as $key) {
-                            $id = $key->id_kamar;
+                            $id_lantai = $key->id_lantai;
                          ?>
                                     
                                         <div class="property-plan mt-4">
@@ -14,7 +14,7 @@
 
                                     <form action="<?php echo base_url().'ubah_kamar/edit'; ?>" method="post" enctype="multipart/form-data">
                           
-                                    <input type="hidden" name="id_kamar" value="<?php echo $key->id_kamar; ?>">
+                                    <input type="text" name="id_kamar" value="<?php echo $id_lantai; ?>">
                                                      <div class="accordion mt-4" id="accordionExample">
                                                   
                                                       <div class="col-md-12 col-xl-12">

@@ -16,20 +16,20 @@
                                    
                                     <tbody>
                                     <?php foreach($tampil as $key) {
-                                        $id_kamar = $key->id_kamar; ?>
+                                        $id_lantai = $key->id_lantai; ?>
                                         <tr>
                                              <td><img src="<?php echo base_url() ?>assets/images/foto_kamar/<?php echo $key->foto_kamar?>" alt="profile-photo" class="img-fluid">
                                                 <div class="property-info d-table">
                                                     <h5 class="text-secondary">Bunga Kost</h5>
                                                     <span class="font-14"><i class=""><?php echo $key->nama_kamar ?></i> </span>
-                                                     <input type="hidden" name="id_kamar" value="<?php echo $key->id_kamar; ?>">
+                                                     <input type="hidden" name="id_kamar" value="<?php echo $key->id_lantai; ?>">
                                                    <!--  <div class="price mt-3"> <span class="text-primary">Rp 500.000</span></div> -->
                                                 </div></td>
                                             <td>10 Jan, 2019</td>
                                             <!-- <td>34</td> -->
                                             <!-- <td>5 Comments</td> -->
                                             <td>
-                                            <a href="<?php echo base_url().'ubah_kamar'?>" class="btn btn-outline-info mr-1 mb-1">Ubah</a> 
+                                            <a href="<?php echo base_url().'ubah_kamar/edit/'.$id_lantai?>" class="btn btn-outline-info mr-1 mb-1">Ubah</a> 
                                             <a data-toggle="modal" data-target="#hapus"class="btn btn-outline-danger mb-1">Hapus</a>
                                             </td>
                                         </tr>

@@ -21,9 +21,14 @@ class Ubah_kamar extends MX_Controller {
 		);
 		echo Modules::run('template/tampilCore_halaman_dashboard_pemilik', $data);
 	}
-	function edit(){
-		$this->m_ubah_kamar->edit();
-        redirect('kamar_saya');
+	function edit($id_kamar){
+
+		$data = array(
+			'namamodule' 	=> "ubah_kamar",
+			'namafileview' 	=> "V_ubah_kamar",
+			'tampil'		=> $this->m_ubah_kamar->edit_tampil($id_kamar),
+		);
+		echo Modules::run('template/tampilCore_halaman_dashboard_pemilik', $data);
 	}
     function hapus(){
 		$this->m_ubah_kamar->hapus();
