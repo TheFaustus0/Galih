@@ -21,6 +21,9 @@ class kamar_saya extends MX_Controller {
 		);
 		echo Modules::run('template/tampilCore_halaman_dashboard_pemilik', $data);
 }
+function hapus($id_kamar){
+		$this->m_kamar_saya->hapus($id_kamar);
+}
 }
 ?>
  

@@ -13,4 +13,8 @@ class M_kamar_saya extends CI_Model {
 		 return $query->result();
 		 
 	}
+	function hapus($id_kamar)
+	{
+		$this->db->where('id_kamar', $id_kamar)->delete('t_kamar');
+}
 }

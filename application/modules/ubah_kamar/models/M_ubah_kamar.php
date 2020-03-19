@@ -67,7 +67,7 @@ class M_ubah_kamar extends CI_Model {
 
 		$this->load->library('upload');
 		$nmfile = "file_".time();
-		$config['upload_path']		= './assets/images/foto kamar/';
+		$config['upload_path']		= './assets/images/foto_kamar/';
 		$config['allowed_types']	= 'gif|jpg|png|jpeg';
 		$config['max_size']			= 5120;
 		$config['max_width']		= 4300;
@@ -86,6 +86,7 @@ class M_ubah_kamar extends CI_Model {
 					'foto' 				=> $gambar['file_name'],
 				);
 				$this->db->update('foto_kamar', $foto);
+			}
 
 function hapus()
 	{
@@ -93,5 +94,3 @@ function hapus()
 	}
 
 	}
-
-}

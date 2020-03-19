@@ -59,7 +59,7 @@
                                 
                                 <!-- Modal footer -->
                                 <div class="modal-footer">
-                                  <a type="button" class="btn btn-danger btn-block" href="<?php echo base_url('kamar_saya/hapus') ?>">Hapus</a>
+                                  <a type="button" class="btn btn-danger btn-block" href="<?php echo base_url('kamar_saya/hapus/'. $key->id_kamar) ?>">Hapus</a>
                                  <!--  <a href="dashboard-booking.html" class="btn btn-success">Kirim</a> -->
                                 </div>
                                 
