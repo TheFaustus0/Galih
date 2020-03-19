@@ -20,7 +20,7 @@ class Kost_saya2 extends MX_Controller {
 			'namafileview' 	=> "V_kost_saya2",
 			'tampil'		=> $this->m_kost_saya2->tampil(),
 		);
-		echo Modules::run('template/tampilCore3', $data);
+		echo Modules::run('template/tampilCore_halaman_dashboard_pemilik', $data);
 	}
 	function edit_kost()
 	{

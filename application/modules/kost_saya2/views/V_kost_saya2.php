@@ -28,10 +28,10 @@
                                             <div class="row">
                                                 <div class="col-lg-12 col-md-12">
                                                     <div class="form-group">
-                                                        <label>Nama Kost :</label><?php echo $res->foto ?>
+                                                        <label>Nama Kost :</label>
                                                         <span class="ml-2 fa-2x"><i title="Property Title" class="fas fa-question-circle text-secondary"></i></span>
                                                         <input type="text" name="nama_kost" class="form-control" value="<?php echo $res->nama_kost?>">
-                                                        <input type="text" name="id_kost" value="<?php echo $res->id_kost ?>">
+                                                        <!-- <input type="text" name="id_kost" value="<?php echo $res->id_kost ?>"> -->
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6 col-md-12">
@@ -103,7 +103,7 @@
                                                 <div class="col-lg-12 col-md-12">
                                                     <div class="form-group">
                                                         <label>Deskripsi</label>
-                                                        <textarea class="form-control bg-gray" rows="8" name="deskripsi"><?php $res->deskripsi ?></textarea>
+                                                        <textarea class="form-control bg-gray" rows="8" name="deskripsi"><?php echo $res->deskripsi ?></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -131,49 +131,49 @@
                                                           <label class="custom-control-label" for="wifi" ><i class="fa fa-wifi"></i>&nbsp;Wifi</label>
                                                         </div>
                                                         <div class="custom-control custom-checkbox">
-                                                          <input type="checkbox" class="custom-control-input" id="Listrik" name="listrik" value="<?php echo $res->listrik ?>">
+                                                          <input type="checkbox" class="custom-control-input" id="Listrik" name="listrik">
                                                           <label class="custom-control-label" for="Listrik"><i class="fa fa-bolt"></i>&nbsp;Listrik</label>
                                                         </div>
                                                         <div class="custom-control custom-checkbox">
-                                                          <input type="checkbox" class="custom-control-input" id="kasur" name="kasur" value="<?php echo $res->kasur ?>">
+                                                          <input type="checkbox" class="custom-control-input" id="kasur" name="kasur">
                                                           <label class="custom-control-label" for="kasur"><i class="fa fa-bed"></i>&nbsp;Kasur</label>
                                                         </div>
                                                 </div>
                                                 <div class="col-lg-3">
                                                         <div class="custom-control custom-checkbox">
-                                                          <input type="checkbox" class="custom-control-input" id="air" name="air" value="<?php echo $res->air ?>">
+                                                          <input type="checkbox" class="custom-control-input" id="air" name="air">
                                                           <label class="custom-control-label" for="air"><i class="fa fa-tint"></i>&nbsp;Air</label>
                                                         </div>
                                                         <div class="custom-control custom-checkbox">
-                                                          <input type="checkbox" class="custom-control-input" id="lemari" name="lemari" value="<?php echo $res->lemari ?>">
+                                                          <input type="checkbox" class="custom-control-input" id="lemari" name="lemari">
                                                           <label class="custom-control-label" for="lemari"><i class="fa fa-server"></i>&nbsp;Lemari</label>
                                                         </div>
                                                         <div class="custom-control custom-checkbox">
-                                                          <input type="checkbox" class="custom-control-input" id="kursi" name="kursi" value="<?php echo $res->kursi ?>">
+                                                          <input type="checkbox" class="custom-control-input" id="kursi" name="kursi">
                                                           <label class="custom-control-label" for="kursi"><i class="fa fa-couch"></i>&nbsp;Kursi</label>
                                                         </div>
                                                 </div>
                                                 <div class="col-lg-3">
                                                         <div class="custom-control custom-checkbox">
-                                                          <input type="checkbox" class="custom-control-input" id="tv" name="tv" value="<?php echo $res->tv ?>">
+                                                          <input type="checkbox" class="custom-control-input" id="tv" name="tv">
                                                           <label class="custom-control-label" for="tv"><i class="fa fa-tv"></i>&nbsp;TV</label>
                                                         </div>
                                                         <div class="custom-control custom-checkbox">
-                                                          <input type="checkbox" class="custom-control-input" id="heater" name="water_heater" value="<?php echo $res->water_heater ?>">
+                                                          <input type="checkbox" class="custom-control-input" id="heater" name="water_heater">
                                                           <label class="custom-control-label" for="heater"><i class="fa fa-dumpster-fire"></i>&nbsp;Water Heater</label>
                                                         </div>
                                                         <div class="custom-control custom-checkbox">
-                                                          <input type="checkbox" class="custom-control-input" id="dapur" name="dapur" value="<?php echo $res->dapur ?>">
+                                                          <input type="checkbox" class="custom-control-input" id="dapur" name="dapur">
                                                           <label class="custom-control-label" for="dapur"><i class="fa fa-oven"></i>Dapur</label>
                                                         </div>
                                                 </div>
                                                     <div class="col-lg-">
                                                         <div class="custom-control custom-checkbox">
-                                                          <input type="checkbox" class="custom-control-input" id="luar" name="kamar_mandi_luar" value="<?php echo $res->kamar_mandi_luar ?>">
+                                                          <input type="checkbox" class="custom-control-input" id="luar" name="kamar_mandi_luar">
                                                           <label class="custom-control-label" for="luar"><i class="fa fa-bath"></i>&nbsp;Kamar Mandi Luar</label>
                                                         </div>
                                                         <div class="custom-control custom-checkbox">
-                                                          <input type="checkbox" class="custom-control-input" id="dalam" name="kamar_mandi_dalam" value="<?php echo $res->kamar_mandi_dalam ?>">
+                                                          <input type="checkbox" class="custom-control-input" id="dalam" name="kamar_mandi_dalam">
                                                           <label class="custom-control-label" for="dalam"><i class="fa fa-bath"></i>&nbsp;Kamar Mandi dalam</label>
                                                         </div>
                                                     </div>
@@ -192,9 +192,8 @@
                                                                 <div class="browse-submit">
                                                                    <input type="file" class="dropify" id="images" name="denah_1" onchange="preview_images();" multiple/>
                                                                     <div class="row" id="image_preview"></div>
-                                                                    <img  src="<?= base_url(); ?>assets/images/denah/<?= $res->nama_tempat ?>" width="150px" />
+                                                                    <img  src="<?= base_url(); ?>assets/images/denah/<?= $res->denah ?>" width="150px" />
                                                                 </div>
-
                                                             </div>
                                                             </div>
                                                         </div>
@@ -208,7 +207,6 @@
                                                                     <div class="row" id="image_preview"></div>
                                                                     
                                                                 </div>
-
                                                             </div>
                                                             </div>
                                                         </div>
@@ -305,7 +303,7 @@
                                                                 </div>
                                                                 <div class="col-lg-2 col-md-2">
                                                                     <div class="form-group">
-                                                                        <input type="text" name="jarak_3" class="form-control" placeholder="Distance (km)"value="<?php echo $res->jarak_jarak_sekolah?>">
+                                                                        <input type="text" name="jarak_3" class="form-control" placeholder="Distance (km)"value="<?php echo $res->jarak_sekolah?>">
                                                                     </div>
                                                                 </div>
                                                             </div>

@@ -8,7 +8,7 @@ class M_kost_saya2 extends CI_Model {
 		// return $this->db->get('t_kost')->result();
 
 		 $this->db->select('*');
-		 $this->db->from('t_kost','t_lantai');
+		 $this->db->from('t_kost');
 		 $this->db->join('foto_kost','foto_kost.id_foto_kost=t_kost.id_foto_kost');
 		 $this->db->join('fasilitas_kost','fasilitas_kost.id_fasilitas_kost=t_kost.id_fasilitas_kost');
 		 $this->db->join('t_rumah_makan','t_rumah_makan.id_rumah_makan=t_kost.id_rumah_makan');
@@ -36,21 +36,21 @@ class M_kost_saya2 extends CI_Model {
 		// // edit rumah sakit
 		$rumah_skt=$this->input->post('rumah_sakit');
 		$jarak_1=$this->input->post('jarak_1');
-		$rumah_sakit = array('nama_tempat' => $rumah_skt, 'jarak' =>$jarak_1 );
+		$rumah_sakit = array('nama_tempat_sakit' => $rumah_skt, 'jarak_sakit' =>$jarak_1 );
 		$this->db->update('t_rumah_sakit',$rumah_sakit);
 		// // selesai
 
 		// // edit super market
 		$super_market=$this->input->post('super_market');
 		$jarak_2=$this->input->post('jarak_2');
-		$s_m = array('nama_tempat' => $super_market, 'jarak' =>$jarak_2 );
+		$s_m = array('nama_tempat_market' => $super_market, 'jarak_market' =>$jarak_2 );
 		$this->db->update('t_super_market',$s_m);
 		// // selesai
 
 		// // edit sekolah
 		$sekolah=$this->input->post('sekolah');
 		$jarak_3=$this->input->post('jarak_3');
-		$sk = array('nama_tempat' => $sekolah, 'jarak' =>$jarak_3 );
+		$sk = array('nama_tempat_sekolah' => $sekolah, 'jarak_sekolah' =>$jarak_3 );
 		$this->db->update('t_sekolah',$sk);
 		// // selesai
 
@@ -58,7 +58,7 @@ class M_kost_saya2 extends CI_Model {
 		$r_makan=$this->input->post('rumah_makan');
 		$jarak4=$this->input->post('jarak_4');
 
-		$rumah_makan = array('nama_tempat' => $r_makan, 'jarak'=>$jarak4 );
+		$rumah_makan = array('nama_tempat_makan' => $r_makan, 'jarak_makan'=>$jarak4 );
 		$this->db->update('t_rumah_makan',$rumah_makan);
 		// selesai
 

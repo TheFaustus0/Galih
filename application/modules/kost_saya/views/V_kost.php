@@ -1,5 +1,4 @@
-
-<div class="col-md-12 col-xl-10">
+                    <div class="col-md-12 col-xl-10">
                         <div class="row">
                             <div class="dashboard-panel w-100">
                                 <h4 class="text-secondary mb-4">Kos Saya</h4>
@@ -18,7 +17,7 @@
                                     <?php foreach($tampil as $res) {
                                         $id_kost = $res->id_kost; ?>
                                         <tr>
-                                            <td><img src="assets/images/thumbnail/2.jpg" alt="">
+                                            <td><img  src="<?= base_url(); ?>assets/images/foto_kost/<?= $res->foto?>" width="150px" />
                                                 <div class="property-info d-table">
                                                     <h5 class="text-secondary"><?php echo $res->nama_kost ?></h5>
                                                     <input type="hidden" name="id_kost" value="<?php echo $res->id_kost ?>">
