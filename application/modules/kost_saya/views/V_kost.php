@@ -28,7 +28,7 @@
                                             <!-- <td>34</td> -->
                                             <!-- <td>5 Comments</td> -->
                                             <td>
-                                            <a href="<?php echo base_url().'kost_saya/edit_kost/'.$id_kost?>" class="btn btn-outline-info mr-1 mb-1">Ubah</a> 
+                                            <a href="<?php echo base_url().'kost_saya2/edit_kost/'.$id_kost  ?>" class="btn btn-outline-info mr-1 mb-1">Ubah</a>
                                             <a data-toggle="modal" data-target="#hapus"class="btn btn-outline-danger mb-1">Hapus</a>
                                             </td>
                                         </tr>
@@ -38,3 +38,28 @@
                 </div>
                 </div>
                 </div>
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                              
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h5>Hapus</h5>
+                                  <h4 class="modal-title"></h4>
+                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                
+                                <!-- Modal body -->
+                                <div class="mt-6 p-5 shadow-one">
+                                    <center><h5>Apakah anda Yakin Untuk Menghapusnya?</h5></center>
+                                    <br>
+                                    </div>
+                                
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                  <a type="button" class="btn btn-danger btn-block" href="<?php echo base_url('kost_saya/hapus/'. $res->id_kost) ?>">Hapus</a>
+                                 <!--  <a href="dashboard-booking.html" class="btn btn-success">Kirim</a> -->
+                                </div>
+                                
+                              </div>
+                            </div>
+                          </div>

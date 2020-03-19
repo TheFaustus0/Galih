@@ -26,17 +26,12 @@ class Kost_saya extends MX_Controller {
 	}
 	function edit_kost($id_kost)
 	{	
-		
-		$data = array(
-			'namamodule' 	=> "kost_saya",
-			'namafileview' 	=> "V_kost_saya2",
-			'tampil'		=> $this->m_kost_saya->edit($id_kost),
-		);
-		echo Modules::run('template/tampilCore_halaman_dashboard_pemilik', $data);
+		 $data['tampil']=$this->m_kost_saya->edit_kost($id_kost);
+		$this->load->view('V_kost', $data);
 	}
-	function hapus(){
-		$this->m_kost_saya->hapus();
-		redirect('kost_saya');
+	function hapus($id_kost){
+		$this->m_kost_saya->hapus($id_kost);
+		// redirect('kost_saya');
 }
 }
 ?>

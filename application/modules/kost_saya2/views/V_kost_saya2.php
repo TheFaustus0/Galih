@@ -4,7 +4,6 @@
                                 <h4 class="text-secondary mb-4">Ubah Data</h4>
                                 <div class="submit-form p-5 bg-white">
                                 <form method="post"  action="<?php echo base_url().'kost_saya/edit_kost' ?>" enctype="multipart/form-data">
-                              
                                     <div class="upload-media mt-5">
                                             <hr>
                                             <div class="row">
@@ -28,10 +27,10 @@
                                             <div class="row">
                                                 <div class="col-lg-12 col-md-12">
                                                     <div class="form-group">
-                                                        <label>Nama Kost :</label>
+                                                        <label>Nama Kost :</label><?php echo $res->foto ?>
                                                         <span class="ml-2 fa-2x"><i title="Property Title" class="fas fa-question-circle text-secondary"></i></span>
                                                         <input type="text" name="nama_kost" class="form-control" value="<?php echo $res->nama_kost?>">
-                                                        <!-- <input type="text" name="id_kost" value="<?php echo $res->id_kost ?>"> -->
+                                                        <input type="text" name="id_kost" value="<?php echo $res->id_kost ?>">
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6 col-md-12">
@@ -131,49 +130,49 @@
                                                           <label class="custom-control-label" for="wifi" ><i class="fa fa-wifi"></i>&nbsp;Wifi</label>
                                                         </div>
                                                         <div class="custom-control custom-checkbox">
-                                                          <input type="checkbox" class="custom-control-input" id="Listrik" name="listrik">
+                                                          <input type="checkbox" class="custom-control-input" id="Listrik" name="listrik" value="<?php echo $res->listrik ?>">
                                                           <label class="custom-control-label" for="Listrik"><i class="fa fa-bolt"></i>&nbsp;Listrik</label>
                                                         </div>
                                                         <div class="custom-control custom-checkbox">
-                                                          <input type="checkbox" class="custom-control-input" id="kasur" name="kasur">
+                                                          <input type="checkbox" class="custom-control-input" id="kasur" name="kasur" value="<?php echo $res->kasur ?>">
                                                           <label class="custom-control-label" for="kasur"><i class="fa fa-bed"></i>&nbsp;Kasur</label>
                                                         </div>
                                                 </div>
                                                 <div class="col-lg-3">
                                                         <div class="custom-control custom-checkbox">
-                                                          <input type="checkbox" class="custom-control-input" id="air" name="air">
+                                                          <input type="checkbox" class="custom-control-input" id="air" name="air" value="<?php echo $res->air ?>">
                                                           <label class="custom-control-label" for="air"><i class="fa fa-tint"></i>&nbsp;Air</label>
                                                         </div>
                                                         <div class="custom-control custom-checkbox">
-                                                          <input type="checkbox" class="custom-control-input" id="lemari" name="lemari">
+                                                          <input type="checkbox" class="custom-control-input" id="lemari" name="lemari" value="<?php echo $res->lemari ?>">
                                                           <label class="custom-control-label" for="lemari"><i class="fa fa-server"></i>&nbsp;Lemari</label>
                                                         </div>
                                                         <div class="custom-control custom-checkbox">
-                                                          <input type="checkbox" class="custom-control-input" id="kursi" name="kursi">
+                                                          <input type="checkbox" class="custom-control-input" id="kursi" name="kursi" value="<?php echo $res->kursi ?>">
                                                           <label class="custom-control-label" for="kursi"><i class="fa fa-couch"></i>&nbsp;Kursi</label>
                                                         </div>
                                                 </div>
                                                 <div class="col-lg-3">
                                                         <div class="custom-control custom-checkbox">
-                                                          <input type="checkbox" class="custom-control-input" id="tv" name="tv">
+                                                          <input type="checkbox" class="custom-control-input" id="tv" name="tv" value="<?php echo $res->tv ?>">
                                                           <label class="custom-control-label" for="tv"><i class="fa fa-tv"></i>&nbsp;TV</label>
                                                         </div>
                                                         <div class="custom-control custom-checkbox">
-                                                          <input type="checkbox" class="custom-control-input" id="heater" name="water_heater">
+                                                          <input type="checkbox" class="custom-control-input" id="heater" name="water_heater" value="<?php echo $res->water_heater ?>">
                                                           <label class="custom-control-label" for="heater"><i class="fa fa-dumpster-fire"></i>&nbsp;Water Heater</label>
                                                         </div>
                                                         <div class="custom-control custom-checkbox">
-                                                          <input type="checkbox" class="custom-control-input" id="dapur" name="dapur">
+                                                          <input type="checkbox" class="custom-control-input" id="dapur" name="dapur" value="<?php echo $res->dapur ?>">
                                                           <label class="custom-control-label" for="dapur"><i class="fa fa-oven"></i>Dapur</label>
                                                         </div>
                                                 </div>
                                                     <div class="col-lg-">
                                                         <div class="custom-control custom-checkbox">
-                                                          <input type="checkbox" class="custom-control-input" id="luar" name="kamar_mandi_luar">
+                                                          <input type="checkbox" class="custom-control-input" id="luar" name="kamar_mandi_luar" value="<?php echo $res->kamar_mandi_luar ?>">
                                                           <label class="custom-control-label" for="luar"><i class="fa fa-bath"></i>&nbsp;Kamar Mandi Luar</label>
                                                         </div>
                                                         <div class="custom-control custom-checkbox">
-                                                          <input type="checkbox" class="custom-control-input" id="dalam" name="kamar_mandi_dalam">
+                                                          <input type="checkbox" class="custom-control-input" id="dalam" name="kamar_mandi_dalam" value="<?php echo $res->kamar_mandi_dalam ?>">
                                                           <label class="custom-control-label" for="dalam"><i class="fa fa-bath"></i>&nbsp;Kamar Mandi dalam</label>
                                                         </div>
                                                     </div>
@@ -194,6 +193,7 @@
                                                                     <div class="row" id="image_preview"></div>
                                                                     <img  src="<?= base_url(); ?>assets/images/denah/<?= $res->denah ?>" width="150px" />
                                                                 </div>
+
                                                             </div>
                                                             </div>
                                                         </div>
@@ -207,6 +207,7 @@
                                                                     <div class="row" id="image_preview"></div>
                                                                     
                                                                 </div>
+
                                                             </div>
                                                             </div>
                                                         </div>
@@ -360,7 +361,7 @@
                                     </form>
                                 </div>
                             </div>
-                            <div class="dashboard-copyright bg-white py-4 text-center w-100"><p style="color: green;">© 2019 Raja Kost All right reserved</p></div>
+                           <!--  <div class="dashboard-copyright bg-white py-4 text-center w-100"><p style="color: green;">© 2019 Raja Kost All right reserved</p></div> -->
                         </div>
                     </div>
                 </div>

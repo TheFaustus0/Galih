@@ -8,6 +8,8 @@ class Kost_saya2 extends MX_Controller {
 		parent::__construct();
 		// model
 		 $this->load->model('m_kost_saya2');
+		 //dropzone
+		 $this->load->helper(array('form','url'));
 		 // $this->load->model('login/m_session');
 	}
 
@@ -22,9 +24,15 @@ class Kost_saya2 extends MX_Controller {
 		);
 		echo Modules::run('template/tampilCore_halaman_dashboard_pemilik', $data);
 	}
-	function edit_kost()
+	function edit_kost($id_kost)
 	{
-		$this->m_kost_saya2->edit_kost();
+
+		$data = array(
+			'namamodule' 	=> "kost_saya2",
+			'namafileview' 	=> "V_kost_saya2",
+			'tampil'		=> $this->m_kost_saya2->edit_kost($id_kost),
+		);
+		echo Modules::run('template/tampilCore_halaman_dashboard_pemilik', $data);
 	}
 }
 ?>
