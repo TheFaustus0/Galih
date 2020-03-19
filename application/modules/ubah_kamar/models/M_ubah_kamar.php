@@ -25,9 +25,9 @@ class M_ubah_kamar extends CI_Model {
 		 $query = $this->db->get();
 		 return $query->result();
 	}
-	function edit(){
+	function edit($id_lantai){
 			//input data kost
-        $id_kamar			= $this->input->post('id_kamar');
+        $id_lantai			= $this->input->post('id_lantai');
 
 		$nama = $this->input->post('nama_kamar');
 		$ukuran= $this->input->post('ukuran_kamar');
@@ -50,7 +50,7 @@ class M_ubah_kamar extends CI_Model {
 							
 							 );
 		
-		$this->db->where('id_kamar',$id_kamar)->update('t_kamar', $data_kamar);
+		$this->db->where('id_lantai',$id_lantai)->update('t_kamar', $data_kamar);
 
 		//selesai
 

@@ -14,7 +14,7 @@
 
                                     <form action="<?php echo base_url().'ubah_kamar/edit'; ?>" method="post" enctype="multipart/form-data">
                           
-                                    <input type="text" name="id_kamar" value="<?php echo $id_lantai; ?>">
+                                    <input type="text" name="id_lantai" value="<?php echo $id_lantai; ?>">
                                                      <div class="accordion mt-4" id="accordionExample">
                                                   
                                                       <div class="col-md-12 col-xl-12">
