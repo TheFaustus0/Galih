@@ -18,7 +18,7 @@
                                     <?php foreach($tampil as $key) {
                                         $id_kamar = $key->id_kamar; ?>
                                         <tr>
-                                             <td><img src="<?php echo base_url() ?>assets/images/foto_kamar/<?php echo $key->foto?>" alt="profile-photo" class="img-fluid">
+                                             <td><img src="<?php echo base_url() ?>assets/images/foto_kamar/<?php echo $key->foto_kamar?>" alt="profile-photo" class="img-fluid">
                                                 <div class="property-info d-table">
                                                     <h5 class="text-secondary">Bunga Kost</h5>
                                                     <span class="font-14"><i class=""><?php echo $key->nama_kamar ?></i> </span>

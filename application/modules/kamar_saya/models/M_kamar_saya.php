@@ -6,9 +6,10 @@ class M_kamar_saya extends CI_Model {
 	function tampil()
 			{
 		 $this->db->select('*');
-		 $this->db->from('t_kamar');
-		 $this->db->join('foto_kamar','foto_kamar.id_foto_kamar=t_kamar.id_foto_kamar');
-		 $this->db->join('fasilitas_kamar','fasilitas_kamar.id_fasilitas_kamar=t_kamar.id_fasilitas_kamar');
+		 $this->db->from('t_lantai');
+		 $this->db->join('t_kamar','t_kamar.id_kamar=t_lantai.id_kamar');
+		 $this->db->join('foto_kamar','foto_kamar.id_foto_kamar=t_lantai.id_foto_kamar');
+		 $this->db->join('fasilitas_kamar','fasilitas_kamar.id_fasilitas_kamar=t_lantai.id_fasilitas_kamar');
 		 $query = $this->db->get();
 		 return $query->result();
 		 

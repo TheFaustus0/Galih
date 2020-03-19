@@ -192,7 +192,7 @@
                                                                 <div class="browse-submit">
                                                                    <input type="file" class="dropify" id="images" name="denah_1" onchange="preview_images();" multiple/>
                                                                     <div class="row" id="image_preview"></div>
-                                                                    <img  src="<?= base_url(); ?>assets/images/denah/<?= $res->nama_tempat ?>" width="150px" />
+                                                                    
                                                                 </div>
 
                                                             </div>
@@ -305,7 +305,7 @@
                                                                 </div>
                                                                 <div class="col-lg-2 col-md-2">
                                                                     <div class="form-group">
-                                                                        <input type="text" name="jarak_3" class="form-control" placeholder="Distance (km)"value="<?php echo $res->jarak_jarak_sekolah?>">
+                                                                        <input type="text" name="jarak_3" class="form-control" placeholder="Distance (km)"value="<?php echo $res->jarak_sekolah?>">
                                                                     </div>
                                                                 </div>
                                                             </div>

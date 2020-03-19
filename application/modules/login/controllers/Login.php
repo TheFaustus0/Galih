@@ -71,7 +71,6 @@ class Login extends MX_Controller {
 		$no_telp= $this->input->post('no_telp');
 		$password= $this->input->post('password');
 
-		$query = $this->db->query('SELECT *FROM t_login  where no_telp='$no_telp' ');
 
 		$where = array('no_telp' => $no_telp,'password' => $password,'status'=>1);
 
