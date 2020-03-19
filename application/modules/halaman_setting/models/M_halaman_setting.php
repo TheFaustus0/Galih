@@ -59,6 +59,7 @@ class M_halaman_setting extends CI_Model {
 			$Password_Baru		  			= $this->input->post('password');
 			//  var_dump($Password_Baru);
 
+			$pass = md5($this->input->post('password'));
 			$syarat = array(
 				'password'		=>$Password_Baru,
 			);
