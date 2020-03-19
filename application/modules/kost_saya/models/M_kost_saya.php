@@ -5,6 +5,8 @@ class M_kost_saya extends CI_Model {
 
 	function tampil()
 	{
+		// return $this->db->get('t_kost')->result();
+
 		 $this->db->select('*');
 		 $this->db->from('t_kost');
 		 $this->db->join('foto_kost','foto_kost.id_foto_kost=t_kost.id_foto_kost');
@@ -13,26 +15,11 @@ class M_kost_saya extends CI_Model {
 		 $this->db->join('t_rumah_sakit','t_rumah_sakit.id_rumah_sakit=t_kost.id_rumah_sakit');
 		 $this->db->join('t_sekolah','t_sekolah.id_sekolah=t_kost.id_sekolah');
 		 $this->db->join('t_super_market','t_super_market.id_super_market=t_kost.id_super_market');
-		 // $this->db->join('t_lantai','t_lantai.id_lantai=t_kost.id_lantai');
+		 $this->db->join('t_lantai','t_lantai.id_lantai=t_kost.id_lantai');
 		 $query = $this->db->get();
 		 return $query->result();
-	}
 
-	function edit($id_kost){
-		 $this->db->select('*');
-		 $this->db->from('t_kost');
-		 $this->db->join('foto_kost','foto_kost.id_foto_kost=t_kost.id_foto_kost');
-		 $this->db->join('fasilitas_kost','fasilitas_kost.id_fasilitas_kost=t_kost.id_fasilitas_kost');
-		 $this->db->join('t_rumah_makan','t_rumah_makan.id_rumah_makan=t_kost.id_rumah_makan');
-		 $this->db->join('t_rumah_sakit','t_rumah_sakit.id_rumah_sakit=t_kost.id_rumah_sakit');
-		 $this->db->join('t_sekolah','t_sekolah.id_sekolah=t_kost.id_sekolah');
-		 $this->db->join('t_super_market','t_super_market.id_super_market=t_kost.id_super_market');
-		 // $this->db->join('t_lantai','t_lantai.id_lantai=t_kost.id_lantai');
-		 $this->db->where('id_kost',$id_kost);
-		 $query = $this->db->get();
-		 return $query->result();
 	}
-
 
 	function edit_kost(){
 		//edit data kost
@@ -49,21 +36,21 @@ class M_kost_saya extends CI_Model {
 		// // edit rumah sakit
 		$rumah_skt=$this->input->post('rumah_sakit');
 		$jarak_1=$this->input->post('jarak_1');
-		$rumah_sakit = array('nama_tempat' => $rumah_skt, 'jarak' =>$jarak_1 );
+		$rumah_sakit = array('nama_tempat_sakit' => $rumah_skt, 'jarak_sakit' =>$jarak_1 );
 		$this->db->update('t_rumah_sakit',$rumah_sakit);
 		// // selesai
 
 		// // edit super market
 		$super_market=$this->input->post('super_market');
 		$jarak_2=$this->input->post('jarak_2');
-		$s_m = array('nama_tempat' => $super_market, 'jarak' =>$jarak_2 );
+		$s_m = array('nama_tempat_market' => $super_market, 'jarak_market' =>$jarak_2 );
 		$this->db->update('t_super_market',$s_m);
 		// // selesai
 
 		// // edit sekolah
 		$sekolah=$this->input->post('sekolah');
 		$jarak_3=$this->input->post('jarak_3');
-		$sk = array('nama_tempat' => $sekolah, 'jarak' =>$jarak_3 );
+		$sk = array('nama_tempat_sekolah' => $sekolah, 'jarak_sekolah' =>$jarak_3 );
 		$this->db->update('t_sekolah',$sk);
 		// // selesai
 
@@ -71,7 +58,7 @@ class M_kost_saya extends CI_Model {
 		$r_makan=$this->input->post('rumah_makan');
 		$jarak4=$this->input->post('jarak_4');
 
-		$rumah_makan = array('nama_tempat' => $r_makan, 'jarak'=>$jarak4 );
+		$rumah_makan = array('nama_tempat_makan' => $r_makan, 'jarak_makan'=>$jarak4 );
 		$this->db->update('t_rumah_makan',$rumah_makan);
 		// selesai
 
@@ -132,7 +119,7 @@ $this->load->library('upload');
 					'denah' 				=> $gbr['file_name'],
 				);
 		$this->db->update('t_lantai', $data);
-		 $this->db->update('foto_kost',$foto);
+		$this->db->update('foto_kost',$foto);
 		 
 
 		 $this->db->update('t_kost',$data_kost);
