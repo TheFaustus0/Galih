@@ -24,6 +24,7 @@ class Template extends MX_Controller {
 		$this->load->view('view_template_core_detail_kamar');
 		$this->load->view('view_template_core_halaman_pemilik');
 		$this->load->view('view_template_core_halaman_pencari');
+		$this->load->view('view_template_core_halaman_kontak');
 
 	}
 
@@ -73,6 +74,13 @@ class Template extends MX_Controller {
 		$id = $this->session->userdata('session_id');
 		
 		$this->load->view('view_template_core_halaman_pencari' , $data);
-	}	
+	}
+	//HALAMAN KONTAK
+	public function tampilCore_halaman_kontak($data)
+	{
+		$id = $this->session->userdata('session_id');
+		
+		$this->load->view('view_template_core_halaman_kontak' , $data);
+	}		
 
 }
