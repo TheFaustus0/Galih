@@ -44,7 +44,7 @@ class M_ubah_kamar extends CI_Model {
 							'tipe_kost'=>$tipe_kost,
 							'deskripsi'=>$deskripsi,
 							'perhari'=>$perhari,
-							'perminggu'=>$perminggu,
+							'perminggu'=>$perminggu, 
 							'perbulan'=>$perbulan,
 							'pertahun'=>$pertahun,
 							
