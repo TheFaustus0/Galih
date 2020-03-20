@@ -16,7 +16,7 @@ class M_halaman_setting extends CI_Model {
 
 			$this->load->library('upload');
 			$nmfile = "file_".time();
-			$config['upload_path']		= 'assets/images/user/';
+			$config['upload_path']		= './assets/images/foto_login/';
 			$config['allowed_types']	= 'gif|jpg|png|jpeg';
 			$config['max_size']			= 4120;
 			$config['max_width']		= 4300;
@@ -54,17 +54,24 @@ class M_halaman_setting extends CI_Model {
 	
 
 		function password(){
+            $rows = $this->db->query("SELECT * FROM t_login where no_telp='".$this->session->no_telp."'")->row_array();
+            
 			$id_user						= $this->input->post('id_user');
+			$old_password					= $rows['password'];
+			$password 						= $this->input->post('old_password');
 
 			$Password_Baru		  			= $this->input->post('password');
-			//  var_dump($Password_Baru);
 
-			// $pass = md5($this->input->post('password'));
-			$syarat = array(
-				'password'		=>$Password_Baru,
-			);
+			if ($old_password == $password) {
+				$syarat = array(
+					'password'		=>$Password_Baru,
+				);
 
-		$this->db->where('id_user',$id_user)->update('t_login', $syarat);
+			$this->db->where('id_user',$id_user)->update('t_login', $syarat);
+			}else{
+				echo "<script>alert('Password Lama Anda Tidak Sama ');window.location='halaman_setting';</script>";
+			}
+
 }
 }
 ?>

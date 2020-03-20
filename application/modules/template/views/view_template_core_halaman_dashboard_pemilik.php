@@ -32,6 +32,18 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/font-awesome.min.css') ?>">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/fonts/flaticon/flaticon.css') ?>">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/style.css') ?>">
+<script type='text/javascript'>
+function preview_image(event) 
+{
+ var reader = new FileReader();
+ reader.onload = function()
+ {
+  var output = document.getElementById('output_image');
+  output.src = reader.result;
+ }
+ reader.readAsDataURL(event.target.files[0]);
+}
+</script>
 
 
 <!--  Title
@@ -43,6 +55,17 @@
     display:none;
     width : 150px;
     height : 150px;
+}
+#wrapper
+{
+ text-align:center;
+ margin:0 auto;
+ padding:0px;
+ width:995px;
+}
+#output_image
+{
+ max-width:300px;
 }
 </style>
 </head>
@@ -70,7 +93,7 @@
                         <div class="dashboard-top-right float-left float-lg-right mt-2 mt-lg-0">
                             <div class="text-white float-left mr-4"> <span class="text-primary"></span></div>
                             <div class="dropdown float-left"> <a class="dropdown-toggle text-white" href="#" role="button" id="dropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="<?php echo base_url('assets/images/foto_login/'.$rows['foto_user']); ?>" alt=""><?php echo $rows['nama']; ?></a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2"> <a class="dropdown-item" href="dashboard-personal-info-pemilik.html">Profile</a> <a class="dropdown-item" href="<?php echo base_url('halaman_dashboard/log_out') ?>">Keluar</a> </div>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2"> <a class="dropdown-item" href="<?php echo base_url('profil_saya') ?>">Profile</a> <a class="dropdown-item" href="<?php echo base_url('halaman_dashboard/log_out') ?>">Keluar</a> </div>
                             </div>
                         </div>
                     </div>
@@ -100,8 +123,8 @@
                                  </ul>
                                 <h6 class="text-primary border-bottom-gray pb-3 my-2 pl-3 d-md-none d-xl-block">Pengaturan</h6> 
                                 <ul class="mb-4 text-white">
-                                    <li><a href="dashboard-personal-info-pemilik.html"><i class="flaticon-seller mr-3 mr-md-0 mr-xl-3"></i><span class="d-md-none d-xl-block">Info Profil</span></a></li>
-                                    <li><a href="dashboard-system-setting-pemilik.html"><i class="flaticon-settings mr-3 mr-md-0 mr-xl-3"></i><span class="d-md-none d-xl-block">Setings</span></a></li>
+                                    <li><a href="<?php echo base_url('profil_saya') ?>"><i class="flaticon-seller mr-3 mr-md-0 mr-xl-3"></i><span class="d-md-none d-xl-block">Info Profil</span></a></li>
+                                    <li><a href="<?php echo base_url('halaman_setting') ?>"><i class="flaticon-settings mr-3 mr-md-0 mr-xl-3"></i><span class="d-md-none d-xl-block">Setings</span></a></li>
                                     <li><a href="<?php echo base_url('cara_pendaftaran_pemilik'); ?>"><i class="flaticon-resume r-3 mr-md-0 mr-xl-3"></i><span class="d-md-none d-xl-block">Cara Pendaftaran kost</span></a></li>
                                 </ul>
                             </div>

@@ -28,6 +28,12 @@ class Template extends MX_Controller {
 	}
 
 	// HALAMAN INDEX
+		public function tampilCore($data)
+	{
+		$id = $this->session->userdata('session_id');
+		
+		$this->load->view('view_template_core',$data);
+	}
 		public function tampilCore_halaman_index($data)
 	{
 		$id = $this->session->userdata('session_id');

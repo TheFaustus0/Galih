@@ -29,7 +29,8 @@ class halaman_setting extends MX_Controller {
 	}
 
 	function password(){
-		$this->m_halaman_setting->password();	
+		$this->m_halaman_setting->password();
+		redirect('profil_saya');
 	}
 }
 ?>
