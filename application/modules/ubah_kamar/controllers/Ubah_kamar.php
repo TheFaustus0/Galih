@@ -21,7 +21,7 @@ class Ubah_kamar extends MX_Controller {
 		);
 		echo Modules::run('template/tampilCore_halaman_dashboard_pemilik', $data);
 	}
-	function edit($id_lantai){
+	function edit_tampil($id_lantai){
 
 		$data = array(
 			'namamodule' 	=> "ubah_kamar",
@@ -29,6 +29,10 @@ class Ubah_kamar extends MX_Controller {
 			'tampil'		=> $this->m_ubah_kamar->edit_tampil($id_lantai),
 		);
 		echo Modules::run('template/tampilCore_halaman_dashboard_pemilik', $data);
+	}
+
+	function edit(){
+		$this->m_ubah_kamar->edit();
 	}
     function hapus(){
 		$this->m_ubah_kamar->hapus();

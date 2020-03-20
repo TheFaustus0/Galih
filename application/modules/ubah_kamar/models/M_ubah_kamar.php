@@ -25,7 +25,7 @@ class M_ubah_kamar extends CI_Model {
 		 $query = $this->db->get();
 		 return $query->result();
 	}
-	function edit($id_lantai){
+	function edit(){
 			//input data kost
         $id_lantai			= $this->input->post('id_lantai');
 
@@ -50,7 +50,7 @@ class M_ubah_kamar extends CI_Model {
 							
 							 );
 		
-		$this->db->where('id_lantai',$id_lantai)->update('t_kamar', $data_kamar);
+		$this->db->where('id_kamar',$id_lantai)->update('t_kamar', $data_kamar);
 
 		//selesai
 
@@ -75,7 +75,8 @@ class M_ubah_kamar extends CI_Model {
 							'dapur' =>$dapur, 
 						);
 
-		$this->db->update('fasilitas_kamar',$fasilitas_kamar);
+
+		$this->db->where('id_fasilitas_kamar',$id_lantai)->update('fasilitas_kamar', $fasilitas_kamar);
 		// // selesai
 
 		$this->load->library('upload');
@@ -96,14 +97,14 @@ class M_ubah_kamar extends CI_Model {
 		$this->upload->do_upload('foto_kamar6');
 		$gambar = $this->upload->data();
 				$foto = array(
-					'foto' 				=> $gambar['file_name'],
+					'foto_kamar' 				=> $gambar['file_name'],
 				);
-				$this->db->update('foto_kamar', $foto);
+			$this->db->where('id_foto_kamar',$id_lantai)->update('foto_kamar', $foto);
 			}
 
 function hapus()
 	{
-		$this->db->where('id_kamar', $id)->delete('t_kamar');
+		$this->db->where('id_lantai', $id)->delete('t_lantai');
 	}
 
 	}
