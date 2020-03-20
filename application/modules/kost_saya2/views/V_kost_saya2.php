@@ -3,17 +3,12 @@
                             <div class="dashboard-panel w-100">
                                 <h4 class="text-secondary mb-4">Ubah Data</h4>
                                 <div class="submit-form p-5 bg-white">
-                                <form method="post"  action="<?php echo base_url().'kost_saya/edit_kost' ?>" enctype="multipart/form-data">
+                                <form method="post"  action="<?php echo base_url().'kost_saya2/edit_kost' ?>" enctype="multipart/form-data">
                                     <div class="upload-media mt-5">
                                             <hr>
                                             <div class="row">
                                                 <div class="col-md-12">
-                                                    <ul class="nav nav-pills mb-3 bg-gray" id="pills-tab" role="tablist">
-                                                        <li class="nav-item"  style="margin-left: 20%;"> <a class="nav-link py-3 active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Data Kost</a> </li>
-                                                        <li></li>
-                                                        <li class="nav-item"  style="margin-left: 20%;"> <a class="nav-link py-3" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Data Kamar</a> </li>
-                                                    </ul>
-                                                    <div class="tab-content mt-4" id="pills-tabContent">
+                                                      <div class="tab-content mt-4" id="pills-tabContent">
                                                         <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home">
                                                             <div class="row">
                               <div class="dashboard-panel w-100">

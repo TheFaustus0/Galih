@@ -28,7 +28,7 @@
                                             <!-- <td>34</td> -->
                                             <!-- <td>5 Comments</td> -->
                                             <td>
-                                            <a href="<?php echo base_url().'kost_saya2/edit_kost/'.$id_kost  ?>" class="btn btn-outline-info mr-1 mb-1">Ubah</a>
+                                            <a href="<?php echo base_url().'kost_saya2/edit_tampil/'.$id_kost  ?>" class="btn btn-outline-info mr-1 mb-1">Ubah</a>
                                             <a data-toggle="modal" data-target="#hapus"class="btn btn-outline-danger mb-1">Hapus</a>
                                             </td>
                                         </tr>
