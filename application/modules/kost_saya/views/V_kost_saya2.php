@@ -9,11 +9,7 @@
                                             <hr>
                                             <div class="row">
                                                 <div class="col-md-12">
-                                                    <ul class="nav nav-pills mb-3 bg-gray" id="pills-tab" role="tablist">
-                                                        <li class="nav-item"  style="margin-left: 20%;"> <a class="nav-link py-3 active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Data Kost</a> </li>
-                                                        <li></li>
-                                                        <li class="nav-item"  style="margin-left: 20%;"> <a class="nav-link py-3" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Data Kamar</a> </li>
-                                                    </ul>
+
                                                     <div class="tab-content mt-4" id="pills-tabContent">
                                                         <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home">
                                                             <div class="row">
@@ -28,7 +24,7 @@
                                             <div class="row">
                                                 <div class="col-lg-12 col-md-12">
                                                     <div class="form-group">
-                                                        <label>Nama Kost :</label><?php echo $res->foto ?>
+                                                        <label>Nama Kost :</label>
                                                         <span class="ml-2 fa-2x"><i title="Property Title" class="fas fa-question-circle text-secondary"></i></span>
                                                         <input type="text" name="nama_kost" class="form-control" value="<?php echo $res->nama_kost?>">
                                                         <input type="text" name="id_kost" value="<?php echo $res->id_kost ?>">
@@ -190,9 +186,9 @@
                                                               <div class="col-md-4"></div>
                                                             <div class="col-md-4">
                                                                 <div class="browse-submit">
-                                                                   <input type="file" class="dropify" id="images" name="denah_1" onchange="preview_images();" multiple/>
+                                                                   <input type="file" class="dropify" id="images" name="denah_1" onchange="preview_images();" multiple value="<?= base_url(); ?>assets/images/denah/<?= $res->nama_tempat ?>" />
                                                                     <div class="row" id="image_preview"></div>
-                                                                    <img  src="<?= base_url(); ?>assets/images/denah/<?= $res->nama_tempat ?>" width="150px" />
+                                                                    <img  src="" width="150px" />
                                                                 </div>
 
                                                             </div>
@@ -245,8 +241,9 @@
                                             <hr>
                                             <div class="row">
                                                 <div class="col-md-4">
-                                               <input type="file" class="dropify" id="images" name="foto_kost"  onchange="preview_images();" multiple/>
-                                               <img  src="<?= base_url(); ?>assets/images/foto_kost/<?= $res->foto ?>" width="150px" />
+                                               <input type="file" class="dropify" id="images" name="foto_kost" multiple/>
+
+                                               
                                                 </div>
                                                 <div class="col-md-4">
                                                <input type="file" class="dropify" id="images" name="foto_kost2"  multiple/>

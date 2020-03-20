@@ -21,9 +21,7 @@ class M_kost_saya2 extends CI_Model {
 
 	}
 
-		function edit_kost($id_kost)
-	{
-		
+		function edit_tampil($id_kost){
 			$this->db->select('*');
 			$this->db->from('t_kost');
 			$this->db->join('foto_kost','foto_kost.id_foto_kost=t_kost.id_foto_kost');
@@ -36,9 +34,15 @@ class M_kost_saya2 extends CI_Model {
 			$this->db->where('id_kost',$id_kost);
 			$query = $this->db->get();
 			return $query->result();
+		}
+
+		function edit_kost()
+	{
+		
+
 
 		//edit data kost
-		$id=$this->input->post('id_kost');
+		$id_kost=$this->input->post('id_kost');
 
 		$nama = $this->input->post('nama_kost');
 		$tahun= $this->input->post('tahun');
@@ -52,21 +56,23 @@ class M_kost_saya2 extends CI_Model {
 		$rumah_skt=$this->input->post('rumah_sakit');
 		$jarak_1=$this->input->post('jarak_1');
 		$rumah_sakit = array('nama_tempat_sakit' => $rumah_skt, 'jarak_sakit' =>$jarak_1 );
-		$this->db->update('t_rumah_sakit',$rumah_sakit);
+
+		$this->db->where('id_rumah_sakit',$id_kost)->update('t_rumah_sakit',$rumah_sakit);
 		// // selesai
 
 		// // edit super market
 		$super_market=$this->input->post('super_market');
 		$jarak_2=$this->input->post('jarak_2');
 		$s_m = array('nama_tempat_market' => $super_market, 'jarak_market' =>$jarak_2 );
-		$this->db->update('t_super_market',$s_m);
+
+		$this->db->where('id_super_market',$id_kost)->update('t_super_market',$s_m);
 		// // selesai
 
 		// // edit sekolah
 		$sekolah=$this->input->post('sekolah');
 		$jarak_3=$this->input->post('jarak_3');
 		$sk = array('nama_tempat_sekolah' => $sekolah, 'jarak_sekolah' =>$jarak_3 );
-		$this->db->update('t_sekolah',$sk);
+		$this->db->where('id_sekolah',$id_kost)->update('t_sekolah',$sk);
 		// // selesai
 
 		// rumah makan
@@ -74,7 +80,7 @@ class M_kost_saya2 extends CI_Model {
 		$jarak4=$this->input->post('jarak_4');
 
 		$rumah_makan = array('nama_tempat_makan' => $r_makan, 'jarak_makan'=>$jarak4 );
-		$this->db->update('t_rumah_makan',$rumah_makan);
+		$this->db->where('id_rumah_makan',$id_kost)->update('t_rumah_makan',$rumah_makan);
 		// selesai
 
 		//input fasilitas
@@ -91,7 +97,7 @@ class M_kost_saya2 extends CI_Model {
 		$kamar_mandi_dalam=$this->input->post('kamar_mandi_dalam');
 
 		$fasilitas = array('wifi' => $wifi, 'listrik' => $listrik, 'kasur' => $kasur, 'air' => $air, 'lemari' => $lemari, 'kursi' => $kursi, 'tv' => $tv, 'water_heater' => $water_heater, 'dapur' => $dapur, 'kamar_mandi_luar' => $kamar_mandi_luar, 'kamar_mandi_dalam' => $kamar_mandi_dalam);
-		$this->db->update('fasilitas_kost',$fasilitas);
+		$this->db->where('id_fasilitas_kost',$id_kost)->update('fasilitas_kost',$fasilitas);
 
 	     // upload gambar kost
 	     $this->load->library('upload');
@@ -111,7 +117,6 @@ class M_kost_saya2 extends CI_Model {
 				$foto = array(
 					'foto' 				=> $gambar['file_name'],
 				);
-		$this->db->update('foto_kost', $foto);
 
 	     //mari wes kurang sing denah
 
@@ -130,14 +135,14 @@ $this->load->library('upload');
 		$this->upload->do_upload('denah_3');
 		$this->upload->do_upload('denah_4');
 		$gbr = $this->upload->data();
-				$data = array(
+				$denah = array(
 					'denah' 				=> $gbr['file_name'],
 				);
-		$this->db->update('t_lantai', $data);
-		$this->db->update('foto_kost',$foto);
+		
+		$this->db->where('id_lantai',$id_kost)->update('t_lantai', $denah);
+		$this->db->where('id_foto_kost',$id_kost)->update('foto_kost', $foto);
 		 
 
-		 $this->db->update('t_kost',$data_kost);
 		 $this->db->where('id_kost',$id_kost)->update('t_kost',$data_kost);
 	     // $this->db->insert('fasilitas_kost',$fas_kost);
 

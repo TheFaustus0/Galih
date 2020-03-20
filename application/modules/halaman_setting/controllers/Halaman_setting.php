@@ -8,7 +8,7 @@ class halaman_setting extends MX_Controller {
 		parent::__construct();
 		// model
 		 $this->load->model('m_halaman_setting');
-		//  $this->load->helper(array('form', 'url'));
+		 $this->load->helper(array('form', 'url'));
 		//  $this->load->model('login/m_session');
 	}
 
@@ -21,7 +21,7 @@ class halaman_setting extends MX_Controller {
 			'namafileview' 	=> "V_halaman_setting",
 			'tampil'		=> $this->m_halaman_setting ->tampil(), 
 		);
-		echo Modules::run('template/tampilCore3', $data);
+		echo Modules::run('template/tampilCore_halaman_dashboard_pemilik', $data);
 	}
 	function edit(){
 		$this->m_halaman_setting->edit();
