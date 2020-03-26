@@ -15,7 +15,7 @@ class M_kost_saya extends CI_Model {
 		 $this->db->join('t_rumah_sakit','t_rumah_sakit.id_rumah_sakit=t_kost.id_rumah_sakit');
 		 $this->db->join('t_sekolah','t_sekolah.id_sekolah=t_kost.id_sekolah');
 		 $this->db->join('t_super_market','t_super_market.id_super_market=t_kost.id_super_market');
-		 $this->db->join('t_lantai','t_lantai.id_lantai=t_kost.id_lantai');
+		 // $this->db->join('t_lantai','t_lantai.id_lantai=t_kost.id_lantai');
 		 $query = $this->db->get();
 		 return $query->result();
 
@@ -31,7 +31,7 @@ class M_kost_saya extends CI_Model {
 		$this->db->join('t_rumah_sakit','t_rumah_sakit.id_rumah_sakit=t_kost.id_rumah_sakit');
 		$this->db->join('t_sekolah','t_sekolah.id_sekolah=t_kost.id_sekolah');
 		$this->db->join('t_super_market','t_super_market.id_super_market=t_kost.id_super_market');
-		$this->db->join('t_lantai','t_lantai.id_lantai=t_kost.id_lantai');
+		// $this->db->join('t_lantai','t_lantai.id_lantai=t_kost.id_lantai');
 		$this->db->where('id_kost',$id_kost);
 		$query = $this->db->get();
 		return $query->result();

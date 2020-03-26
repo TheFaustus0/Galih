@@ -57,7 +57,7 @@ class M_halaman_setting extends CI_Model {
             $rows = $this->db->query("SELECT * FROM t_login where no_telp='".$this->session->no_telp."'")->row_array();
             
 			$id_user						= $this->input->post('id_user');
-			$old_password					= $rows['password'];
+			$password_lama					= $rows['password'];
 			$password 						= $this->input->post('old_password');
 
 			$Password_Baru		  			= $this->input->post('password');

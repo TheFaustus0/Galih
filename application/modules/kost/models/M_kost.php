@@ -85,23 +85,40 @@ class M_kost extends CI_Model {
 		// selesai
 
 		$this->load->library('upload');
-		$nmfile = "file_".time();
+		$new_name = time().$_FILES["foto_kost"]['name'];
+		$config['file_name'] = $new_name;
 		$config['upload_path']		= './assets/images/foto_kost/';
 		$config['allowed_types']	= 'gif|jpg|png|jpeg';
 		$config['max_size']			= 5120;
 		$config['max_width']		= 4300;
 		$config['max_height']		= 4300;
-		$config['file_name'] 		= $nmfile;
+
 
 		$this->upload->initialize($config);
 		$this->upload->do_upload('foto_kost');
-		$this->upload->do_upload('foto_kost2');
-		$this->upload->do_upload('foto_kost3');
+		
+		
 		$gambar = $this->upload->data();
 				$foto = array(
 					'foto' 				=> $gambar['file_name'],
 				);
-				$this->db->insert('foto_kost', $foto);
+		$this->db->insert('foto_kost', $foto);
+
+
+		$this->upload->do_upload('foto_kost2');
+			$gambar2 = $this->upload->data();
+				$foto = array(
+					'foto' 				=> $gambar2['file_name'],
+				);
+		$this->db->insert('foto_kost', $foto);
+
+		$this->upload->do_upload('foto_kost3');
+		$gambar3 = $this->upload->data();
+				$foto = array(
+					'foto' 				=> $gambar3['file_name'],
+				);
+		$this->db->insert('foto_kost', $foto);
+
 
 	     //mari wes kurang sing denah
 
