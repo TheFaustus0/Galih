@@ -21,4 +21,21 @@ class Pesan_pemilik extends MX_Controller {
 		);
 		echo Modules::run('template/tampilCore_halaman_dashboard_pemilik', $data);
 	}
+
+	function pesan()
+	{
+		$this->m_pesan_pemilik->pesan();
+	}
+
+	function balas()
+	{
+		$this->m_pesan_pemilik->balas();
+	}
+
+	function hapus()
+	{
+		$this->m_pesan_pemilik->hapus();
+	}
+
 }
+?>
