@@ -20,7 +20,7 @@ class Kost extends MX_Controller {
 			'namafileview' 	=> "v_tambah_kost",
 			'tampil'		=> $this->m_kost->tampil(),
 		);
-		echo Modules::run('template/tampilCore', $data);
+		echo Modules::run('template/tampilCore_halaman_dashboard_pemilik', $data);
 	}
 
 
