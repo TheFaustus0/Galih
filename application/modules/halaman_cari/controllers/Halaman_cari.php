@@ -19,7 +19,7 @@ class Halaman_cari extends MX_Controller {
 		$this->load->library('pagination');
 		$config['base_url'] = site_url('halaman_cari/index');
 		$config['total_rows'] = $jumlah_data;
-        $config['per_page'] = 10;
+        $config['per_page'] = 6;
         $config['first_link']       = 'First';
         $config['last_link']        = 'Last';
         $config['next_link']        = 'Next';

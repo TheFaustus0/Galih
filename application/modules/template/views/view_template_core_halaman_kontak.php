@@ -22,15 +22,15 @@
 
 <!--  Css Link
   ========================================================-->
-<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-slider.css">
-<link rel="stylesheet" type="text/css" href="assets/css/jquery-ui.css">
-<link rel="stylesheet" type="text/css" href="assets/css/layerslider.css">
-<link rel="stylesheet" type="text/css" href="assets/css/color.css" id="color-change">
-<link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.min.css">
-<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="assets/fonts/flaticon/flaticon.css">
-<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/bootstrap.min.css')?>">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/bootstrap-slider.css')?>">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/jquery-ui.css')?>">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/layerslider.css')?>">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/color.css" id="color-change')?>">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/owl.carousel.min.css')?>">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/font-awesome.min.css')?>">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/fonts/flaticon/flaticon.css')?>">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/style.css')?>">
  <script src="http://maps.googleapis.com/maps/api/js"></script>
 <script type='text/javascript'>
 function preview_image(event) 
@@ -148,9 +148,9 @@ google.maps.event.addDomListener(window, 'load', initialize);
             </div>
         </header>
         <?php
-                         $this->load->view($namamodule .'/'.$namafileview);
-                    ?>
-                <footer class="full-row bg-gray p-0">
+            $this->load->view($namamodule .'/'.$namafileview);
+        ?>
+            <footer class="full-row bg-gray p-0">
             <div class="container">
                 <div  class="row">
                     <div class="col-lg-12">
@@ -220,19 +220,19 @@ google.maps.event.addDomListener(window, 'load', initialize);
                 </div>
             </div>
         </footer>
-                <div class="row copyright">
+                <!-- <div class="row copyright">
                     <div class="col-sm-6"> <span>© 2020 Rajakost</span> </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-6"> -->
                         <!-- <ul class="line-menu text-ordinary float-right">
                             <li><a href="#">Privacy & Policy</a></li>
                             <li>|</li>
                             <li><a href="#"> Site Map</a></li>
                         </ul> -->
-                    </div>
+                    <!-- </div>
                 </div>
             </div>
         </footer>
-        
+         -->
         <!-- Scroll to top --> 
         <a href="#" class="bg-secondary text-white hover-text-secondary" id="scroll"><i class="fas fa-angle-up"></i></a> 
         <!-- End Scroll To top --> 
@@ -248,22 +248,22 @@ google.maps.event.addDomListener(window, 'load', initialize);
 <script src="assets/js/layerslider.transitions.js"></script> 
 <script src="assets/js/layerslider.kreaturamedia.jquery.js"></script> 
 <!--jQuery Layer Slider --> 
-<script src="assets/js/popper.min.js"></script> 
-<script src="assets/js/bootstrap.min.js"></script> 
-<script src="assets/js/owl.carousel.min.js"></script> 
-<script src="assets/js/tmpl.js"></script> 
-<script src="assets/js/jquery.dependClass-0.1.js"></script> 
-<script src="assets/js/draggable-0.1.js"></script> 
-<script src="assets/js/jquery.slider.js"></script> 
-<script src="assets/js/wow.js"></script> 
-<script src="assets/js/YouTubePopUp.jquery.js"></script> 
-<script src="assets/js/validate.js"></script> 
-<script src="assets/js/jquery.cookie.js"></script> 
-<script src="assets/js/custom.js"></script> 
-<script src="assets/https://maps.googleapis.com/maps/api/js?key=AIzaSyBPZ-Erd-14Vf2AoPW2Pzlxssf6-2R3PPs"></script> 
-<script src="assets/js/map/markerwithlabel_packed.js"></script> 
-<script src="assets/js/map/infobox.js"></script> 
-<script src="assets/js/map/custom-map.js"></script> 
+<script src="<?php echo base_url('assets/js/popper.min.js')?>"></script> 
+<script src="<?php echo base_url('assets/js/bootstrap.min.js')?>"></script> 
+<script src="<?php echo base_url('assets/js/owl.carousel.min.js')?>"></script> 
+<script src="<?php echo base_url('assets/js/tmpl.js')?>"></script> 
+<script src="<?php echo base_url('assets/js/jquery.dependClass-0.1.js')?>"></script> 
+<script src="<?php echo base_url('assets/js/draggable-0.1.js')?>"></script> 
+<script src="<?php echo base_url('assets/js/jquery.slider.js')?>"></script> 
+<script src="<?php echo base_url('assets/js/wow.js')?>"></script> 
+<script src="<?php echo base_url('assets/js/YouTubePopUp.jquery.js')?>"></script> 
+<script src="<?php echo base_url('assets/js/validate.js')?>"></script> 
+<script src="<?php echo base_url('assets/js/jquery.cookie.js')?>"></script> 
+<script src="<?php echo base_url('assets/js/custom.js')?>"></script> 
+<script src="<?php echo base_url('assets/https://maps.googleapis.com/maps/api/js?key=AIzaSyBPZ-Erd-14Vf2AoPW2Pzlxssf6-2R3PPs')?>"></script> 
+<script src="<?php echo base_url('assets/js/map/markerwithlabel_packed.js')?>"></script> 
+<script src="<?php echo base_url('assets/js/map/infobox.js')?>"></script> 
+<script src="<?php echo base_url('assets/js/map/custom-map.js')?>"></script> 
 <script>
 (function($){
   var _latitude = 36.596165;

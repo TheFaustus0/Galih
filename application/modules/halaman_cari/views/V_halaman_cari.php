@@ -75,41 +75,44 @@
                                         </div>
                                     </div>
                                         <div class="row">
+                                        <?php foreach ($tampil as $key) {
+                                         ?>
                                         <div class="col-md-4">
-                                            <div class="featured-thumb hover-zoomer mb-4">
-                                                <div class="overlay-black overflow-hidden position-relative"> <img src="assets/images/thumbnail/p6.jpg" alt="">
-                                        <!-- <h4 style="color: white;"><div class="tag button alt featured"style="background-color: red">Terpakai</div></h4> -->
-                                        <div class="sale bg-secondary text-white"> Dikoskan</div>
-                                        <div class="price" style="color: aqua;"> <span class="text-white">Rp.300.000/bulan</span></div>
-                                        <div class="starmark text-white"><i class="far fa-star"></i></div>
+                                        <div class="featured-thumb hover-zoomer mb-4">
+                                          <div class="overlay-black overflow-hidden position-relative"> <img src="<?php echo base_url() ?>assets/images/foto_kamar/<?php echo $key->foto?>" alt="">
+                                    <!-- <h4 style="color: white;"><div class="tag button alt featured"style="background-color: red">Terpakai</div></h4> -->
+                                    <div class="sale bg-secondary text-white">Dikostkan</div>
+                                    <div class="price" style="color: aqua;"><!-- Rp.6.000.00/tahun  --><span class="text-white">Rp.600.000/bulan</span></div>
+                                    <div class="starmark text-white"><i class="far fa-star"></i></div>
+                                </div>
+                                <div class="featured-thumb-data shadow-one">
+                                    <div class="p-4">
+                                        <h6 class="text-secondary hover-text-primary mb-2"><a href="detail 2.html"><?php echo $key->nama_kost ?></a></h6>
+                                        <span class="location"><i class="fas fa-map-marker-alt text-primary"></i> <?php echo $key->alamat_kost ?></span> </div>
+                                    <div class="bg-gray quantity px-4 pt-4">
+                                        <ul>
+                                           <li>
+                                             <i class="flaticon-bed"></i>&nbsp;Kasur
+                                           </li>
+                                           <li>
+                                             <i class="fa fa-home"></i>&nbsp;Kamar
+                                           </li>
+                                           <li>
+                                             <i class="fa fa-wifi"></i>&nbsp;&nbsp;Wi-fi
+                                           </li>
+                                            <li>
+                                            <i class="fa fa-laptop"></i>&nbsp;tv
+                                           </li>
+                                        </ul>
                                     </div>
-                                    <div class="featured-thumb-data shadow-one">
-                                        <div class="p-4">
-                                            <h6 class="text-secondary hover-text-primary mb-2"><a href="detail 2.html"> Melati Kost</a></h6>
-                                            <span class="location"><i class="fas fa-map-marker-alt text-primary"></i> Jln tugung 01</span> </div>
-                                        <div class="bg-gray quantity px-4 pt-4">
-                                            <ul>
-                                                <li>
-                                                <i class="flaticon-bed"></i>&nbsp;Kasur
-                                            </li>
-                                            <li>
-                                                <i class="fa fa-home"></i>&nbsp;Kamar
-                                            </li>
-                                            <li>
-                                                <i class="fa fa-wifi"></i>&nbsp;&nbsp;Wi-fi
-                                            </li>
-                                                <li>
-                                                <i class="fa fa-laptop"></i>&nbsp;tv
-                                            </li>
-                                            </ul>
+                                    <div class="p-4 d-inline-block w-100">
+                                        <div class="float-left"><i class="fas fa-user text-primary mr-1"></i> Surly </div>
+                                        <div class="float-right"><i class="far fa-calendar-alt text-primary mr-1"></i> 6 bulan lalu</div>
+                                    </div>
                                         </div>
-                                        <div class="p-4 d-inline-block w-100">
-                                            <div class="float-left"><i class="fas fa-user text-primary mr-1"></i> Sendi</div>
-                                            <div class="float-right"><i class="far fa-calendar-alt text-primary mr-1"></i>  5 bulan lalu</div>
-                                        </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                      </div>
+                                    </div>
+                                        <?php }?>
                                         <div class="col-md-12">
                                             <nav aria-label="Page navigation">
                                                 <?php 
