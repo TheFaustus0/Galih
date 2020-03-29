@@ -3,8 +3,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class M_halaman_cari extends CI_Model {
 
-	function tampil()
+	function tampil($number,$offset)
 	{
+		$this->db->limit($number,$offset);
 		 $this->db->select('*');
 		 $this->db->from('t_kost');
 		 $this->db->join('foto_kost','foto_kost.id_foto_kost=t_kost.id_foto_kost');
@@ -15,6 +16,10 @@ class M_halaman_cari extends CI_Model {
 		 $this->db->join('t_super_market','t_super_market.id_super_market=t_kost.id_super_market');
 		 $query = $this->db->get();
 		 return $query->result();
+	}
+		
+	function jumlah_data(){
+		return $this->db->get('t_kost')->num_rows();
 	}
 
 
