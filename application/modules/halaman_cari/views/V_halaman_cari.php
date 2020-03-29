@@ -45,79 +45,7 @@
                                                 <button type="submit" class="btn btn-primary w-100 mt-sm-50">Cari</button>
                                             </div>
                                         </div>
-                                     <!--    <div class="col-lg-12">
-                                            <div class="d-inline-block text-ordinary hover-text-primary my-4 font-14"> <a class="checkbox-collapse" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">More Option</a> </div>
-                                            <div class="row">
-                                                <div class="col">
-                                                    <div class="collapse font-14" id="multiCollapseExample1">
-                                                        <div class="card card-body px-0 border-0">
-                                                            <div class="row">
-                                                                <div class="col-lg-3 col-md-6">
-                                                                    <ul class="check-submit">
-                                                                        <li>
-                                                                            <input id="feature-1" class="d-none" type="checkbox">
-                                                                            <label for="feature-1">Parking Garage</label>
-                                                                        </li>
-                                                                        <li>
-                                                                            <input id="feature-2" class="d-none" type="checkbox">
-                                                                            <label for="feature-2">Security System</label>
-                                                                        </li>
-                                                                        <li>
-                                                                            <input id="feature-3" class="d-none" type="checkbox">
-                                                                            <label for="feature-3">Window Covering</label>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                                <div class="col-lg-3 col-md-6">
-                                                                    <ul class="check-submit">
-                                                                        <li>
-                                                                            <input id="feature-4" class="d-none" type="checkbox">
-                                                                            <label for="feature-4">Swiming Pool</label>
-                                                                        </li>
-                                                                        <li>
-                                                                            <input id="feature-5" class="d-none" type="checkbox">
-                                                                            <label for="feature-5">Air Condition</label>
-                                                                        </li>
-                                                                        <li>
-                                                                            <input id="feature-8" class="d-none" type="checkbox">
-                                                                            <label for="feature-8">Fire Protection</label>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                                <div class="col-lg-3 col-md-6">
-                                                                    <ul class="check-submit">
-                                                                        <li>
-                                                                            <input id="feature-9" class="d-none" type="checkbox">
-                                                                            <label for="feature-9">Garden</label>
-                                                                        </li>
-                                                                        <li>
-                                                                            <input id="feature-10" class="d-none" type="checkbox">
-                                                                            <label for="feature-10">Fire Place</label>
-                                                                        </li>
-                                                                        <li>
-                                                                            <input id="feature-11" class="d-none" type="checkbox">
-                                                                            <label for="feature-11">Emeargency Exit</label>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                                <div class="col-lg-3 col-md-6">
-                                                                    <ul class="check-submit">
-                                                                        <li>
-                                                                            <input id="feature-12" class="d-none" type="checkbox">
-                                                                            <label for="feature-12">Home Theater</label>
-                                                                        </li>
-                                                                        <li>
-                                                                            <input id="feature-13" class="d-none" type="checkbox">
-                                                                            <label for="feature-13">Gym & Sports</label>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div> -->
+                                    
                                     </div>
                                 </form>
                             </div>
@@ -435,8 +363,4 @@
             </div>
             <br>
             <br>
-            <br>
-            <br>
-            <br>
-            <br> 
         </div>

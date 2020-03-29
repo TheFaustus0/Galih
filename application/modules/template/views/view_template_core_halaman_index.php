@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from unicoderbd.com/theme/html/homex/index-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 14 Feb 2020 03:25:36 GMT -->
+<!-- Mirrored from unicoderbd.com/theme/html/homex/dashboard-submit-property.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 14 Feb 2020 03:31:19 GMT -->
 <head>
 <!-- Required meta tags -->
 <meta charset="utf-8">
@@ -15,22 +15,78 @@
 <meta name="author" content="Unicoder">
 <link rel="shortcut icon" href="assets/images/favicon.ico">
 
-<!--    Fonts
-    ========================================================-->
+<!--  Fonts
+  ========================================================-->
 <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,500,600,700&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700" rel="stylesheet">
 
-<!--    Css Link
-    ========================================================-->
-<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-slider.css">
-<link rel="stylesheet" type="text/css" href="assets/css/jquery-ui.css">
-<link rel="stylesheet" type="text/css" href="assets/css/layerslider.css">
-<link rel="stylesheet" type="text/css" href="assets/css/color.css" id="color-change">
-<link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.min.css">
-<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="assets/fonts/flaticon/flaticon.css">
-<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<!--  Css Link
+  ========================================================-->
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/dropify/dropify.min.css')?>">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/bootstrap.min.css') ?>">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/bootstrap-slider.css') ?> ">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/jquery-ui.css') ?>">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/layerslider.css') ?>">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/color.css') ?>" id="color-change">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/owl.carousel.min.css') ?>">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/font-awesome.min.css') ?>">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/fonts/flaticon/flaticon.css') ?>">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/style.css') ?>">
+ <script src="http://maps.googleapis.com/maps/api/js"></script>
+<script type='text/javascript'>
+function preview_image(event) 
+{
+ var reader = new FileReader();
+ reader.onload = function()
+ {
+  var output = document.getElementById('output_image');
+  output.src = reader.result;
+ }
+ reader.readAsDataURL(event.target.files[0]);
+}
+</script>
+<script>
+// variabel global marker
+var marker;
+  
+function taruhMarker(peta, posisiTitik){
+    
+    if( marker ){
+      // pindahkan marker
+      marker.setPosition(posisiTitik);
+    } else {
+      // buat marker baru
+      marker = new google.maps.Marker({
+        position: posisiTitik,
+        map: peta
+      });
+    }
+    
+}
+  
+function initialize() {
+  var propertiPeta = {
+    center:new google.maps.LatLng(-8.5830695,116.3202515),
+    zoom:9,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  
+  var peta = new google.maps.Map(document.getElementById("googleMap"), propertiPeta);
+  
+  // even listner ketika peta diklik
+  google.maps.event.addListener(peta, 'click', function(event) {
+    taruhMarker(this, event.latLng);
+  });
+
+}
+
+
+// event jendela di-load  
+google.maps.event.addDomListener(window, 'load', initialize);
+  
+
+</script>
+
 
 <!--    Title
     =========================================================-->
@@ -181,25 +237,54 @@
 
 <!--    Js Link
 ============================================================--> 
-<script src="assets/js/jquery.min.js"></script> 
+<script src="<?php echo base_url('assets/js/jquery.min.js') ?>"></script> 
 <!--jQuery Layer Slider --> 
-<script src="assets/js/greensock.js"></script> 
-<script src="assets/js/layerslider.transitions.js"></script> 
-<script src="assets/js/layerslider.kreaturamedia.jquery.js"></script> 
+<script src="<?php echo base_url('assets/js/greensock.js') ?>"></script> 
+<script src="<?php echo base_url('assets/js/layerslider.transitions.js') ?>"></script> 
+<script src="<?php echo base_url('assets/js/layerslider.kreaturamedia.jquery.js') ?>"></script> 
 <!--jQuery Layer Slider --> 
-<script src="assets/js/popper.min.js"></script> 
-<script src="assets/js/bootstrap.min.js"></script> 
-<script src="assets/js/owl.carousel.min.js"></script> 
-<script src="assets/js/tmpl.js"></script> 
-<script src="assets/js/jquery.dependClass-0.1.js"></script> 
-<script src="assets/js/draggable-0.1.js"></script> 
-<script src="assets/js/jquery.slider.js"></script> 
-<script src="assets/js/wow.js"></script> 
-<script src="assets/js/YouTubePopUp.jquery.js"></script> 
-<script src="assets/js/validate.js"></script> 
-<script src="assets/js/jquery.cookie.js"></script> 
-<script src="assets/js/custom.js"></script>
+<script src="<?php echo base_url('assets/js/popper.min.js') ?>"></script> 
+<script src="<?php echo base_url('assets/js/bootstrap.min.js') ?>"></script> 
+<script src="<?php echo base_url('assets/js/owl.carousel.min.js') ?>"></script> 
+<script src="<?php echo base_url('assets/js/tmpl.js') ?>"></script> 
+<script src="<?php echo base_url('assets/js/jquery.dependClass-0.1.js') ?>"></script> 
+<script src="<?php echo base_url('assets/js/draggable-0.1.js') ?>"></script> 
+<script src="<?php echo base_url('assets/js/jquery.slider.js') ?>"></script> 
+<script src="<?php echo base_url('assets/js/wow.js') ?>"></script> 
+<script src="<?php echo base_url('assets/js/YouTubePopUp.jquery.js') ?>"></script> 
+<script src="<?php echo base_url('assets/js/validate.js') ?>"></script> 
+<script src="<?php echo base_url('assets/js/jquery.cookie.js') ?>"></script> 
+<script src="<?php echo base_url('assets/js/custom.js') ?>"></script>
+<script src="<?php echo base_url('assets/js/dropzone.js') ?> "></script>
+<script type="text/javascript" src="<?php echo base_url('assets/js/jquery.js')?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.js')?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/dropify/dropify.min.js')?>"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.dropify').dropify({
+      messages: {
+                default: 'Drag atau drop untuk memilih gambar',
+                replace: 'Ganti',
+                remove:  'Hapus',
+                error:   'error'
+            }
+    });
+  });
+  
+</script>
+<script>
+    function previewImage() {
+    document.getElementById("image-preview").style.display = "block";
+    var oFReader = new FileReader();
+     oFReader.readAsDataURL(document.getElementById("image-source").files[0]);
+ 
+    oFReader.onload = function(oFREvent) {
+      document.getElementById("image-preview").src = oFREvent.target.result;
+    };
+  };
+</script>
+
 </body>
 
-<!-- Mirrored from unicoderbd.com/theme/html/homex/index-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 14 Feb 2020 03:26:45 GMT -->
+<!-- Mirrored from unicoderbd.com/theme/html/homex/dashboard-submit-property.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 14 Feb 2020 03:31:19 GMT -->
 </html>

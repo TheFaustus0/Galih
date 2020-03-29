@@ -20,25 +20,7 @@ class Halaman_cari extends MX_Controller {
 			'namafileview' 	=> "V_halaman_cari",
 			'tampil'		=> $this->m_halaman_cari->tampil(),
 		);
-		echo Modules::run('template/tampilCore_halaman_index', $data);
-	}
-
-	function tambah()
-	{
-		$this->m_halaman_cari->tambah();
-		// redirect('halaman_index');
-	}
-
-	function edit()
-	{
-		$this->m_halaman_cari->edit();
-		// redirect('halaman_index');
-	}
-
-	function hapus($id)
-	{
-		$this->m_halaman_cari->hapus($id);
-		// redirect('halaman_index');
+		echo Modules::run('template/tampilCore_halaman_kontak', $data);
 	}
 
 	function cari()

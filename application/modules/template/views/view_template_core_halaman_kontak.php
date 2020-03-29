@@ -31,6 +31,60 @@
 <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="assets/fonts/flaticon/flaticon.css">
 <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+ <script src="http://maps.googleapis.com/maps/api/js"></script>
+<script type='text/javascript'>
+function preview_image(event) 
+{
+ var reader = new FileReader();
+ reader.onload = function()
+ {
+  var output = document.getElementById('output_image');
+  output.src = reader.result;
+ }
+ reader.readAsDataURL(event.target.files[0]);
+}
+</script>
+<script>
+// variabel global marker
+var marker;
+  
+function taruhMarker(peta, posisiTitik){
+    
+    if( marker ){
+      // pindahkan marker
+      marker.setPosition(posisiTitik);
+    } else {
+      // buat marker baru
+      marker = new google.maps.Marker({
+        position: posisiTitik,
+        map: peta
+      });
+    }
+    
+}
+  
+function initialize() {
+  var propertiPeta = {
+    center:new google.maps.LatLng(-8.5830695,116.3202515),
+    zoom:9,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  
+  var peta = new google.maps.Map(document.getElementById("googleMap"), propertiPeta);
+  
+  // even listner ketika peta diklik
+  google.maps.event.addListener(peta, 'click', function(event) {
+    taruhMarker(this, event.latLng);
+  });
+
+}
+
+
+// event jendela di-load  
+google.maps.event.addDomListener(window, 'load', initialize);
+  
+
+</script>
 
 <!--  Title
   =========================================================-->
@@ -96,7 +150,76 @@
         <?php
                          $this->load->view($namamodule .'/'.$namafileview);
                     ?>
-        
+                <footer class="full-row bg-gray p-0">
+            <div class="container">
+                <div  class="row">
+                    <div class="col-lg-12">
+                        <div class="divider py-80">
+                            <div class="row">
+                                <div class="col-md-12 col-lg-4">
+                                    <div class="footer-widget mb-4">
+                                        <div class="footer-logo mb-4"> <a href="#"><img class="logo-bottom" src="assets/images/logo/logo.png" alt="image"></a> </div>
+                                        <p class="pb-20">Tujuaan kami membuat rajakost agar memudahkan pemilik kost untuk menawarkan kostnya dan juga mempermudah si pencari kost kususnya di indonesia.</p>
+                                        <a class="btn btn-primary mt-4" href="#">Registrasi Sekarang</a> </div>
+                                </div>
+                                <div class="col-md-12 col-lg-8">
+                                    <div class="row">
+                                        <div class="col-md-4 col-lg-4">
+                                            <div class="footer-widget footer-nav mb-4">
+                                                <h4 class="widget-title text-secondary double-down-line-left position-relative">Support</h4>
+                                                <ul>
+                                                    <!-- <li><a href="#">Forum</a></li> 
+                                                    <li><a href="#">Statistik</a></li> -->
+                                                    <li><a href="syarat-ketentuan.html">Syarat dan Ketentuan</a></li>
+                                                    <li><a href="#">Didukung</a></li>
+                                                    <li><a href="faq.html">Ajukan Pertanyaan dengan Bebas</a></li>
+                                                    <li><a href="contact.html">Kontak</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-lg-4">
+                                            <div class="footer-widget footer-nav mb-4">
+                                                <h4 class="widget-title text-secondary double-down-line-left position-relative">Tautan Langsung</h4>
+                                                <ul>
+                                                    <li><a href="about.html">Tentang kami</a></li>
+                                                    <li><a href="#">Kost Unggulan</a></li>
+                                                    <li><a href="#">Menjadi anggota</a></li>
+                                                    <li><a href="#">Kirim Kos</a></li>
+                                                    <li><a href="#">Bagaimana Cara Kerjanya</a></li>
+                                                    <li><a href="#">Agen Kami</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-lg-4">
+                                            <div class="footer-widget">
+                                                <h4 class="widget-title text-secondary double-down-line-left position-relative">Kontak Kami</h4>
+                                                <ul>
+                                                   <li>Rajakost</li>
+                                                   <li>Telepon: 085-232-706-483</li>
+                                                   <li>Fax: 555-535-89777</li>
+                                                   <li>Email: rajakost@gmail.com</li>
+                                                </ul>
+                                            </div>
+                                            <div class="footer-widget media-widget mt-4 text-secondary hover-text-primary"> <a href="#"><i class="fab fa-facebook-f"></i></a> <a href="#"><i class="fab fa-twitter"></i></a> <a href="#"><i class="fab fa-google-plus-g"></i></a> <a href="#"><i class="fab fa-linkedin-in"></i></a> <a href="#"><i class="fas fa-rss"></i></a> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row copyright">
+                    <div class="col-sm-6"> <span>© 2020 Rajakost</span> </div>
+                    <div class="col-sm-6">
+                       <!--  <ul class="line-menu text-ordinary float-right">
+                            <li><a href="#">Kebijakan pribadi</a></li>
+                            <li>|</li>
+                            <li><a href="#">Peta Situs</a></li>
+                        </ul> -->
+                    </div>
+                </div>
+            </div>
+        </footer>
                 <div class="row copyright">
                     <div class="col-sm-6"> <span>© 2020 Rajakost</span> </div>
                     <div class="col-sm-6">
