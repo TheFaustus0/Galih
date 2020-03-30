@@ -79,7 +79,7 @@
                                          ?>
                                         <div class="col-md-4">
                                         <div class="featured-thumb hover-zoomer mb-4">
-                                          <div class="overlay-black overflow-hidden position-relative"> <img src="<?php echo base_url() ?>assets/images/foto_kamar/<?php echo $key->foto?>" alt="">
+                                          <div class="overlay-black overflow-hidden position-relative"> <img src="<?php echo base_url() ?>assets/images/foto_kost/<?php echo $key->foto?>" alt="" height="200">
                                     <!-- <h4 style="color: white;"><div class="tag button alt featured"style="background-color: red">Terpakai</div></h4> -->
                                     <div class="sale bg-secondary text-white">Dikostkan</div>
                                     <div class="price" style="color: aqua;"><!-- Rp.6.000.00/tahun  --><span class="text-white">Rp.600.000/bulan</span></div>
